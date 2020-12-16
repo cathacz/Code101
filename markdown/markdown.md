@@ -1,4 +1,5 @@
 # Markdown 
-
-$ _text_ 	> italic
-$ **text** 	> bold
+```
+$ _ text _ 	> italic  
+$ ** text ** 	> bold
+```
