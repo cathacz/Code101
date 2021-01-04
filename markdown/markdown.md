@@ -16,12 +16,16 @@ H6 > ``` ###### text```
 ## lists
 
 ### unsorted list:
-```* text```
-```* text```
-```* text ```
+```* text``` :leftwards_arrow_with_hook:
+
+```* text``` :leftwards_arrow_with_hook:
+
+```* text ``` :leftwards_arrow_with_hook:
 
 ### sorted list:
 
-```1. text```
-```2. text```
-```3. text```
+```1. text``` :leftwards_arrow_with_hook:
+
+```2. text``` :leftwards_arrow_with_hook:
+
+```3. text``` :leftwards_arrow_with_hook:

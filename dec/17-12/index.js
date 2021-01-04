@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 //Printing out a sting
 console.log('Catha says:');
 console.log('"I am bored"');
@@ -67,7 +66,13 @@ let isStudent = "yay";
 isStudent[0] == "y" ? console.log('€5 please'): console.log('€12 for you');
 let speedCheck = 120;
 speedCheck >= 50 ? console.log('too fast'):console.log('right speed');
-=======
+
+
+
+//Hadis stuff from here down:
+//-------------------------------------------------------------------------
+
+
 //Printing out a string
 console.log("Hadi");
 console.log("I love Berlin");
@@ -147,4 +152,3 @@ console.log(email[5]);
 email[4] == "@"
   ? console.log("Enter a valid email add")
   : console.log("this is a nice start for an email add");
->>>>>>> 5a8b2f36a9d6ea5e3cb196a96237417026686681
