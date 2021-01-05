@@ -1,18 +1,21 @@
-// I thought tomorrow is off and it will be nice to practice a bit more, so here are some fun exercises >> we have a different understanding from "fun" ;)
-
-// MATH – Perform Mathematical Tasks with JavaScript. Remember: you must use the Math functions and print all results to the console!
+// I thought tomorrow is off and it will be nice to practice a bit more, so here are some fun exercises >> we have a different understanding of "fun" ;)
 
 function display(str) {
     console.log(str);
 }
+
+// MATH – Perform Mathematical Tasks with JavaScript. Remember: you must use the Math functions and print all results to the console!
 display("Math-Stuff");
 
 // 1. Minimum and maximum
 display("1. Minimun & Maximum:");
+
 // a. Lowest Number >> Print out the lowest number between -1 and 4.
 display(Math.min(-1, 0, 1, 2, 3, 4));
+
 // b. Highest Number >> Print out the highest number between -1 and 4.
 display(Math.max(-1, 0, 1, 2, 3, 4));
+
 // 2. Rounding
 display("2. Rounding:");
 
@@ -40,22 +43,28 @@ display(Math.floor(e));
 
 // Strings and Numbers
 display("Strings and Numbers");
+
 // 1. Concatenation.
 display("1. Concatenation:");
-// Create two variables. One variable should contain a string value and the other should contain a number. Concatenate the string and the number.
 
+// Create two variables. One variable should contain a string value and the other should contain a number. Concatenate the string and the number.
 let introSentence = "Hi, my name is Nancy and I am";
 let age = 25;
+
 // Expected Output: "Hi, my name is Nancy and I am 25"
 display(introSentence + " " + age);
+display(`${introSentence} ${age}`);
+
 // In this case, what is the + operator doing? Comment your answer in the js file.
 
 // 2. Converting
 display("2. Converting:");
+
 // Create a variable with the value of “1005”. Convert it to a number.
 let x = "1005";
 display(x);
-display(parseInt(x,10)); 
+display(parseInt(x, 10));
+
 // Create a variable with the value of “10.05". Convert it to a number.
 let y = "10.05";
 display(y);
