@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-
+<html>
 <head>
     <meta charset="utf-8">
     <title>DOM</title>
@@ -27,7 +27,7 @@
         document.write(`Hat Kinder: ${absatz.hasChildNodes()} </br>`);
         document.write(`Anzahl Kinder: ${absatz.childNodes.length} </br>`);
 
-        for(let i=0; <absatz.childNodes.length; i++)
+        for(let i=0; i < absatz.childNodes.length; i++)
         {
             if(absatz.childNodes[i].nodeType ==3)
                 document.write(`Kind ${i}: Typ = Text, Wert: ${absatz.childNodes[i].nodeValue} </br>`);
@@ -35,10 +35,46 @@
             document.write(`Kind ${i} : Type = Element, Name: ${absatz.childNodes[i].nodeName} </br>`)
         }
     
-        document.write("Erstes Kind: " + absatz.firstChild.nodeValue + </br>);
+        document.write(`Erstes Kind: ${absatz.firstChild.nodeValue}  </br>`);
         document.write(`Letztes Kind: ${absatz.lastChild.nodeValue} </br>`);
         document.write(`Kind 1, erstes Kind ${absatz.childNodes[1].firstChild.nodeValue}`);
     </script>
+
+    <p><b>Knoten hinzufügen: anhängen und einschieben</b></p>
+    <script>
+        function anhaengen()
+        {
+            var text = document.createTextNode("angehängter Absatz");
+            var absatz = document.createElement("p");
+            absatz.appendChild(text);
+            absatz.setAttribute("style", "text-align:left");
+            document.body.appendChild(absatz);
+        }
+
+        function einschieben()
+        {
+            var text = document.createTextNode("eingeschobener Absatz");
+            var absatz = document.createElement("p");
+            absatz.appendChild(text);
+            absatz.setAttribute("style", "text-align:left");
+            document.body.insertBefore(absatz, document.getElementById("z"));
+        }
+
+    </script>
+        <p id="x" style="text-align: left;">Erster Absatz</p>
+        <p id="y" style="text-align: left;">Zweiter Absatz</p>
+        <p id="z" style="text-align: left;">Dritter Absatz</p>
+
+        <p>
+            <input id="anh" type="button" value="Anhängen">
+            <input id="ein" type="button" value="Einschieben">
+        </p>
+
+        <script>
+            document.getElementById("anh").addEventListener("click", anhaengen);
+            document.getElementById("ein").addEventListener("click", einschieben);
+        </script>
+
 </body>
 
 </html>
