@@ -20,8 +20,25 @@
     </script>
 
     <p>Kindknoten</p>
-    <p id="c1">Das <i>ist</i> ein Absatz </p>
+    <p id="c1">Das <i>ist</i> ein Absatz <b>mit</b> Markierungen. </p>
 
+    <script>
+        var absatz = document.getElementById("c1");
+        document.write(`Hat Kinder: ${absatz.hasChildNodes()} </br>`);
+        document.write(`Anzahl Kinder: ${absatz.childNodes.length} </br>`);
+
+        for(let i=0; <absatz.childNodes.length; i++)
+        {
+            if(absatz.childNodes[i].nodeType ==3)
+                document.write(`Kind ${i}: Typ = Text, Wert: ${absatz.childNodes[i].nodeValue} </br>`);
+            else if (absatz.childNodes[i].nodeType == 1)
+            document.write(`Kind ${i} : Type = Element, Name: ${absatz.childNodes[i].nodeName} </br>`)
+        }
+    
+        document.write("Erstes Kind: " + absatz.firstChild.nodeValue + </br>);
+        document.write(`Letztes Kind: ${absatz.lastChild.nodeValue} </br>`);
+        document.write(`Kind 1, erstes Kind ${absatz.childNodes[1].firstChild.nodeValue}`);
+    </script>
 </body>
 
 </html>
