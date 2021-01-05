@@ -6,16 +6,16 @@
 </head>
 
 <body>
-    <p id="a1">Erste Absatz</p>
+    <p id="a1">Erster Absatz</p>
     <p id="a2">Zweiter <b>Absatz</b></p>
     <p id="a3">Dritter Absatz mit <a
             href="https://www.google.com/webhp?hl=de&sa=X&ved=0ahUKEwjVl7mGsYTuAhUHDGMBHfWyDX0QPAgI">einem Link</a></p>
     <script>
         var absatz3 = document.getElementById("a3");
-        document.write(`Über ID: Inhalt:  + ${absatz3.firstChild.nodeValue} + , Style:  + ${absatz3.getAttribute("style")} + <br>`);
+        document.write(`Über ID: Inhalt: ${absatz3.firstChild.nodeValue}, Style: ${absatz3.getAttribute("style")}<br>`);
         
         var absatz1 = document.getElementsByTagName("p")[0];
-        
+        document.write(`Über Tag: Inhalt: ${absatz1.firstChild.nodeValue}, Style: ${absatz1.getAttribute("style")}`)
     </script>
 </body>
 
