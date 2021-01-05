@@ -96,7 +96,22 @@ let  floaty = 1.8;
 let realInt=Math.floor(floaty);
 display(realInt);
 
-// round up
+// Math.ceil() >> round up
 
 let realInt2 = Math.ceil(floaty);
 display(realInt2);
+
+//Math.max() Math.min()  grabs highest/lowest number in group of number
+
+display(Math.min(1, 3, 6, 90, 32, 7896, 432, -4));
+
+
+let p = "123";
+let newNum111 = parseInt(p);
+display(newNum111);
+let q = "130.7";
+let newNum112 = parseFloat(q);
+display(newNum112);
+display(parseFloat(q));
+let isDog = "dog";
+display(isDog?`pat, pat` : `find me a dog to pat!`);

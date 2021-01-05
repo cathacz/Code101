@@ -6,6 +6,7 @@
 </head>
 
 <body>
+    <p>Knoten abrufen: 1. byElement (ID) 2. byTagName (tag)</p>
     <p id="a1">Erster Absatz</p>
     <p id="a2">Zweiter <b>Absatz</b></p>
     <p id="a3">Dritter Absatz mit <a
@@ -17,6 +18,10 @@
         var absatz1 = document.getElementsByTagName("p")[0];
         document.write(`Über Tag: Inhalt: ${absatz1.firstChild.nodeValue}, Style: ${absatz1.getAttribute("style")}`)
     </script>
+
+    <p>Kindknoten</p>
+    <p id="c1">Das <i>ist</i> ein Absatz </p>
+
 </body>
 
 </html>
