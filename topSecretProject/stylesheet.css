@@ -1,0 +1,28 @@
+h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: large;
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: medium;
+    text-align: center;
+}
+
+p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif Sans;
+    text-align: center;
+}
+
+document.write {
+    text-align: center;
+}
+
+script.button {
+    background-color: bisque;
+    border: burlywood;
+    text-align: center;
+    color: darksalmon;
+
+}
