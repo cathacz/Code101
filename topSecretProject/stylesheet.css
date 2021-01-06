@@ -19,7 +19,7 @@ document.write {
     text-align: center;
 }
 
-script.button {
+a:button {
     background-color: bisque;
     border: burlywood;
     text-align: center;
