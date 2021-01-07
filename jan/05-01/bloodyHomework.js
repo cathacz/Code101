@@ -82,3 +82,16 @@ display(parseFloat(y));
 
 
 display(Math.round(7.49999999));
+
+
+
+function oddEven (num) {
+    return num % 2 == 0 ? "even" : "odd";
+}
+
+display(oddEven(59));
+
+function oddOReven(num){
+    return num % 2 == 0 ? "even" : "odd";
+}
+display(oddOReven(49));
