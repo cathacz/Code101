@@ -69,3 +69,52 @@ let floatNum1 = 0.1;
 let floatNum2 = 0.1;
 let = result = floatNum1 * floatNum2;
 display(result.toFixed(3));
+
+
+//Math.random
+//numbers between 0-100 > * 100 +1 | 101 >>>> just 0-99 = *100
+display(Math.floor(Math.random() * 10) + 1);
+display((Math.random() * 10).toFixed(2));
+
+// == >>  not equal: != >>
+
+console.log(1 == 1);
+console.log(1 == 16);
+console.log(1 == 1 && 1 == 9); // true && false = FALSE; true && true = TRUE; false && false = FALSE; 
+console.log(1 == 1 || 1 == 9); // true && false = TRUE; true && true = TRUE; false && false = FALSE; 
+console.log(1 == 20 || (1 == 1 && 1 != 292)); // false || true && true
+
+let boo1, boo2, boo3;
+boo1 = true;
+boo2 = false;
+console.log(boo1 && boo2 ? "cool" : "not cool");
+console.log(boo1 || boo2 ? "cool" : "not cool");
+
+//=== == 
+let w = "10";
+let v = 10;
+console.log(w == v ? "cool" : "not cool"); // type doesnt matter
+console.log(w === v ? "cool" : "not cool"); //=== not both same type
+
+console.log(Math.floor(Math.random()*6)+1); //Create a program that prints a random integer from 1 - 6.
+
+function square(h) {
+    return (Math.sqrt(h * h));
+}
+// display(square(16)); >> testing if it works...
+
+console.log(Math.sqrt(Math.pow(4, 2) + Math.pow(2, 2))); // Pythagoras: a² + b² = c² 
+
+console.log(Math.sin(90));
+
+let alpha = 45;
+
+//function sinus(num) {
+  //  let sine = Math.sqrt(Math.pow(1,2)-Math.sqrt(Math.cos(alpha),2));
+    //return Math.sin(sine);
+//}
+//console.log(sinus);
+display("Sinus");
+console.log(Math.sin(Math.sqrt(Math.pow(1,2)-Math.sqrt(Math.cos(alpha),2))));
+console.log(Math.sin(Math.sqrt(Math.pow(1,2)-Math.sqrt(Math.cos(89),2))));
+
