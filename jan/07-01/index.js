@@ -110,7 +110,7 @@ console.log("Sinus90: " + Math.sin(90));
 
 display("Why functions never work");
 
-let alpha = 45;
+let alpha = 32;
 let h = 1; // Hypotenuse
 
 function sinus() {
@@ -140,6 +140,14 @@ function gegenkathete(){
 }
  display("Gegenkathete:" + gegenkathete());
 
+function ankathete(){
+    return ankathete = Math.cos(alpha) * h;
+}
+display("Ankathete: " + ankathete());
+
+let hypo = Math.sqrt(Math.pow(ankathete, 2) + Math.sqrt(gegenkathete, 2));
+
+display("check Hypotenuse: " + hypo); // WHY???
 
 let gk = 4;
 let hy = 5;
@@ -148,4 +156,16 @@ let sine = Math.sin(gk/hy);
 display("SinusAlpha = " + gk/hy);
 display(sine);
 
-display(Math.asin(gk/hy));
+function radians_to_degrees(radians) // am Taschenrechner DEG 
+{
+  var pi = Math.PI;
+  return radians * (180/pi);
+}
+          
+console.log(radians_to_degrees(Math.asin(gk/hy)));
+
+
+// display(Math.fround(7.9292937352849503635))
+// display(Math.sign)
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
+
