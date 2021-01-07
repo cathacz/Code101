@@ -27,6 +27,16 @@ let e = 43.342;
 
 // a. Round up >> Round up each of the following numbers to the nearest integer: 3321.32321, 326.76, 76788.7, -9.78, 28.329.
 
+function roundUp(num) {
+    let result = Math.ceil(num);
+    display(result);
+}
+roundUp(a);
+roundUp(b);
+//..
+
+display(Math.round(7.49999999));
+
 display(Math.ceil(a));
 display(Math.ceil(b));
 display(Math.ceil(c));
@@ -69,3 +79,6 @@ display(parseInt(x, 10));
 let y = "10.05";
 display(y);
 display(parseFloat(y));
+
+
+display(Math.round(7.49999999));

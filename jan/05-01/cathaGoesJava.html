@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <title>DOM</title>
+    <link rel="stylesheet" href="../../topSecretProject/stylesheet.css">
 </head>
 
 <body>
-    <p>Knoten abrufen: 1. byElement (ID) 2. byTagName (tag)</p>
+    <h1>javaStuff</h1>
+    <h2>Knoten abrufen: 1. byElement (ID) 2. byTagName (tag)</h2>
     <p id="a1">Erster Absatz</p>
     <p id="a2">Zweiter <b>Absatz</b></p>
     <p id="a3">Dritter Absatz mit <a
@@ -14,12 +17,12 @@
     <script>
         var absatz3 = document.getElementById("a3");
         document.write(`Über ID: Inhalt: ${absatz3.firstChild.nodeValue}, Style: ${absatz3.getAttribute("style")}<br>`);
-        
-        var absatz1 = document.getElementsByTagName("p")[0];
+
+        var absatz1 = document.getElementsByTagName("p")[1];
         document.write(`Über Tag: Inhalt: ${absatz1.firstChild.nodeValue}, Style: ${absatz1.getAttribute("style")}`)
     </script>
 
-    <p>Kindknoten</p>
+    <h2>Kindknoten</h2>
     <p id="c1">Das <i>ist</i> ein Absatz <b>mit</b> Markierungen. </p>
 
     <script>
@@ -27,14 +30,13 @@
         document.write(`Hat Kinder: ${absatz.hasChildNodes()} </br>`);
         document.write(`Anzahl Kinder: ${absatz.childNodes.length} </br>`);
 
-        for(let i=0; i < absatz.childNodes.length; i++)
-        {
-            if(absatz.childNodes[i].nodeType ==3)
+        for (let i = 0; i < absatz.childNodes.length; i++) {
+            if (absatz.childNodes[i].nodeType == 3)
                 document.write(`Kind ${i}: Typ = Text, Wert: ${absatz.childNodes[i].nodeValue} </br>`);
             else if (absatz.childNodes[i].nodeType == 1)
-            document.write(`Kind ${i} : Type = Element, Name: ${absatz.childNodes[i].nodeName} </br>`)
+                document.write(`Kind ${i} : Type = Element, Name: ${absatz.childNodes[i].nodeName} </br>`)
         }
-    
+
         document.write(`Erstes Kind: ${absatz.firstChild.nodeValue}  </br>`);
         document.write(`Letztes Kind: ${absatz.lastChild.nodeValue} </br>`);
         document.write(`Kind 1, erstes Kind ${absatz.childNodes[1].firstChild.nodeValue}`);
@@ -42,8 +44,7 @@
 
     <p><b>Knoten hinzufügen: anhängen und einschieben</b></p>
     <script>
-        function anhaengen()
-        {
+        function anhaengen() {
             var text = document.createTextNode("angehängter Absatz");
             var absatz = document.createElement("p");
             absatz.appendChild(text);
@@ -51,8 +52,7 @@
             document.body.appendChild(absatz);
         }
 
-        function einschieben()
-        {
+        function einschieben() {
             var text = document.createTextNode("eingeschobener Absatz");
             var absatz = document.createElement("p");
             absatz.appendChild(text);
@@ -61,19 +61,22 @@
         }
 
     </script>
-        <p id="x" style="text-align: left;">Erster Absatz</p>
-        <p id="y" style="text-align: left;">Zweiter Absatz</p>
-        <p id="z" style="text-align: left;">Dritter Absatz</p>
+    <p id="x" >Erster Absatz</p>
+    <p id="y" >Zweiter Absatz</p>
+    <p id="z" >Dritter Absatz</p>
 
-        <p>
-            <input id="anh" type="button" value="Anhängen">
-            <input id="ein" type="button" value="Einschieben">
-        </p>
+    <p>
+     
+        <button id="an" type="button" class="anhaengen">Gib Ihm!</button>
+        <input id="ein" type="button" value="Einschieben">
+    </p>
 
-        <script>
-            document.getElementById("anh").addEventListener("click", anhaengen);
-            document.getElementById("ein").addEventListener("click", einschieben);
-        </script>
+    <script>
+        document.getElementById("an").addEventListener("click", anhaengen);
+        document.getElementById("ein").addEventListener("click", einschieben);
+    </script>
+    <p><input id="anh" type="button" value="Anhängen"></p>
+    <script>document.getElementById("anh").addEventListener("click", anhaengen);</script>
 
 </body>
 

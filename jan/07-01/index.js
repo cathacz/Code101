@@ -33,8 +33,39 @@ display(((x + y) / (z + 2.44)) * 29 + x);
 let d, f, r;
 d = "C";
 f = 33;
-r=true;
-console.log(d+f);
+r = true;
+console.log(d + f);
 
-// Number + Boolean
-console.log(f+r);
+// Number + Boolean (true = 1, false = 0)
+console.log(f + r); // 33 + 1(true) = 34
+
+//string + string
+
+let str1 = "Hej";
+let str2 = "Nice Shoes";
+console.log(str1 + str2);
+
+// ++ --
+let a = 1;
+//++ a;
+a++;
+display(a);
+display(++a);
+
+a--;
+display(--a);
+
+//typeOf
+
+display(typeof str1);
+display(typeof x);
+display(typeof console) //object > object orientated language
+display(typeof Math.ceil) // function
+
+
+// 3.444444444444444
+
+let floatNum1 = 0.1;
+let floatNum2 = 0.1;
+let = result = floatNum1 * floatNum2;
+display(result.toFixed(3));
