@@ -165,13 +165,13 @@ for (let i = 1; i <= 4; i++) {
 }
 console.log(text);
 
-
-// let countNum = 0;
-// text = "";
-// for (let i = 1; i <= 4;) {text += i + " ";
-//      if (countNum != 0 && countNum % 3 == 0) {i = 0; countNum = 0;}
-//      countNum++}
-// console.log(text);
+console.log("----------------------hej there you are");
+ let countNum = 0;
+text = "";
+ for (let i = 0; i <= 4;) {text += i + " ";
+      if (countNum != 0 && countNum % 3 == 0) {i++; countNum = 0;}
+     countNum++}
+console.log(text);
 
 // 0 1 2 3 4 0 1 2 3 4 0 1 2 3 4
 text = "";
@@ -228,11 +228,11 @@ const countOccurrences = (str, chr) => {
 }
 console.log(countOccurrences("this is a szring", "i"));
 
-/*
+
 text ="";
-for (let i = 1; i <= 4;) {
+for (let i = 1; i <= 4;i++) {
     text += i + " ";
 }
 console.log(text.repeat(3));
 
-*/
+
