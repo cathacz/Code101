@@ -47,8 +47,26 @@ const numbers = [2, 0, 8, 1, 9, 7, 3, 6, 5, 4];
 console.log(numbers[5]);
 
 const hobbies = ["sleeping", "photography", "drawing", "gardening", "building stuff"];
-let i = 0;
-console.log (hobbies[i]);
-i++;
-console.log (hobbies[i]);
-i++;
+// DRY
+// let i = 0;
+// console.log (hobbies[i]);
+// i++;
+// console.log (hobbies[i]);
+// i++;
+
+
+// better Way >>> LOOPS!
+print ("L O O P S")
+for (let i = 0; i < hobbies.length; i++) {
+    console.log(hobbies[i]);
+};
+
+for (let i = 0; i <= 10; i++) {
+    console.log (i);
+};
+
+for (let i = 1; i <=10; i ++) {
+console.log(`${i} * 1 = ${i*1}`);
+};
+
+
