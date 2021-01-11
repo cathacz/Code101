@@ -165,22 +165,13 @@ for (let i = 1; i <= 4; i++) {
 }
 console.log(text);
 
-text = "";
-for (let i = 0; i <= 4; i++) {
-    text += i + " ";
-}
-console.log(text.repeat(3));
 
-let countN = 0;
-for (let i = 0; i <= 4; i++) {
-    console.log(i);
-    if (countNum != 0 && countNum % 3 == 0) {
-        i = 0; 
-        countNum = 0;
-    }
-    countNum++
-}
-
+// let countNum = 0;
+// text = "";
+// for (let i = 1; i <= 4;) {text += i + " ";
+//      if (countNum != 0 && countNum % 3 == 0) {i = 0; countNum = 0;}
+//      countNum++}
+// console.log(text);
 
 // 0 1 2 3 4 0 1 2 3 4 0 1 2 3 4
 text = "";
@@ -191,6 +182,12 @@ for (let i = 1; i <= 3; i++) {      //i = 1
 }
 console.log(text);
 
+/// repeat 
+text = "";
+for (let i = 0; i <= 4; i++) {
+    text += i + " ";
+}
+console.log(text.repeat(3));
 
 // I'm super lost
 
@@ -199,3 +196,43 @@ for (let i = 1; i <= 10; i++) {
         console.log(`${i}*${j} = ${i * j}`);
     } console.log("----------------------- new table");
 }
+
+let st = "Hej this is me";
+let stToArr = st.split(" ");
+console.log(stToArr);
+
+let backToSt = stToArr.join(" ");
+console.log(backToSt);
+
+
+// 1 1 1 2 2 2 3 3 3 4 4 4
+text = "";
+for (let i = 1; i <= 4; i++) {
+    for (let j = 0; j < 3; j++) {
+        text += i + " ";
+    }
+}
+console.log(text);
+
+
+const countOccurrences = (str, chr) => {
+    let strIntoArr = str.split("");
+    console.log(strIntoArr);
+    let count = 0;
+    for (let i = 0; i < strIntoArr.length; i++){
+        if (strIntoArr[i] == chr){
+            count++;
+        }
+    }
+    return count;
+}
+console.log(countOccurrences("this is a szring", "i"));
+
+/*
+text ="";
+for (let i = 1; i <= 4;) {
+    text += i + " ";
+}
+console.log(text.repeat(3));
+
+*/
