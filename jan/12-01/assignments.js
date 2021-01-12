@@ -7,12 +7,15 @@ function isLEQzero(p) {
 }
 console.log(isLEQzero(4)); // almost und woher kommt das verdammte 'undefined'
 */
-
+let p = 0;
 function isLEQZero(p) {
-    p <= 0 ? console.log("true") : console.log("false");
+    return p <= 0 //? console.log("true") : console.log("false");
+     
 }
-console.log(isLEQZero(8));
-
+console.log(isLEQZero(3)); // WHY WHY WHY is there an undefined???? AAAAAAAAAAHHHHHHHHHHHH
+console.log(isLEQZero(0)); 
+console.log(isLEQZero(-4)); 
+console.log(isLEQZero(10)); 
 // Examples:
 
 // isLEQZero(3) ➞ false
@@ -40,10 +43,10 @@ console.log("--------Exercise-------");
 age = Number;
 sn = Number;
 function calcLifetimeSupply(age, sn) {
-    i = 100 - age; i <= 100; i++;
-    return calcLifetimeSupply = i * sn;
+    i = 100 - age;
+    return calcLifetimeSupply = i * 365 * sn;
 }
-console.log(`The snack company should provide you with ${calcLifetimeSupply(24, 2)} units, until you are a ripe old age of 100. Happy snacking!`);
+console.log(`The snack company should provide you with ${calcLifetimeSupply(25, 2)} units, until you are a ripe old age of 100. Happy snacking!`);
 // Examples:
 
 // calcLifetimeSupply(25, 2) ➞ "The snack company should provide you with 54,788 units, until you are a ripe old age of 100. Happy snacking!"
@@ -56,13 +59,16 @@ console.log("--------Exercise-------");
 
 let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
-console.log(months[3 - 1]);
+//console.log(months[3 - 1]);
 
-function monthName(i) {
-    i = 0; i <= 12;
-    return monthName = months[i - 1];
+function monthName() {
+    i = 1; i <=12;
+    return console.log(months[i+1]); 
 }
-console.log(monthName(3));
+console.log(monthName(5));
+
+
+
 // For example, if you're given 3 as input, your function should return "March", because March is the 3rd month.
 //  here are the months array as a small help :)
 //   let months = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ];
@@ -128,7 +134,7 @@ for (i = 4; i >= 1; i--) {
 draw = "12345";
 let text = "";
 for (i = 1; i <= 5; i++) {
-    text += i; 
+    text += i;
 }
 console.log(text);
 
@@ -150,13 +156,13 @@ console.log("--------Exercise-------");
 12345
  */
 const numbersCount = () => {
-  for (let i = 0; i <= 5; i++) {
-    // something
-    for (let j = 1; j <= i; j++) {
+    for (let i = 0; i <= 5; i++) {
+        // something
+        for (let j = 1; j <= i; j++) {
+            // something
+        }
         // something
     }
-      // something
-  }
 };
 numbersCount();
 /*Bonus: create another function by doing some changes to the previous function in order to have the following outputs :
@@ -176,6 +182,7 @@ let storeArr= ["milk", "eggs", "cheese", "butter"];
 inventoryCheck("cheese") returns true
 inventoryCheck( "ham") returns false 
 */
+let storeArr = ["milk", "eggs", "cheese", "butter"];
 
 console.log("--------Exercise-------");
 // Extra work :)
@@ -188,3 +195,9 @@ console.log("--------Exercise-------");
 // passwordGen()  ➞ Oy$tkBGoo5fg§mO4AdV&Kh8XXZR4d7K
 // passwordGen()  ➞ v0ZwDrn@hfI€kOKWH§k6kqub6zfpuyP
 console.log("--------Exercise-------");
+
+var i = 0;
+for (; i < 9; i++) {
+    console.log(i);
+    // more statements
+}
