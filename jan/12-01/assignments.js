@@ -29,9 +29,10 @@ console.log("--------Exercise-------");
 //PS:  calculate the dog's age in dog years based on the calculation of 1 human year = 7 dog years.
 
 function dogAge(i) {
+   
     return dogAge = i * 7;
 }
-console.log(`Your doggy is ${dogAge(4)} years in dog years!`);
+console.log( `Your doggy is ${dogAge(4)} years in dog years!`);
 // Example:
 
 // dogAge(4) ➞ "Your doggy is 28 years old in dog years!"
@@ -184,9 +185,10 @@ const numbersCountBackwards = () => {
         str += `\n`;
         for (let j = 5; j >= i; j--) {
             str += j;
+            console.log(str);
         }
         // something
-    } console.log(str);
+    } 
 };
 numbersCountBackwards();
 
@@ -202,7 +204,7 @@ inventoryCheck( "ham") returns false
 */
 let storeArr = ["milk", "eggs", "cheese", "butter"];
 function inventoryCheck(str){
-    return str == storeArr;
+    return storeArr.includes(str);
 }
 console.log(inventoryCheck("cheese"));
 console.log(inventoryCheck("ham"));
@@ -219,8 +221,3 @@ console.log("--------Exercise-------");
 // passwordGen()  ➞ v0ZwDrn@hfI€kOKWH§k6kqub6zfpuyP
 console.log("--------Exercise-------");
 
-var i = 0;
-for (; i < 9; i++) {
-    console.log(i);
-    // more statements
-}
