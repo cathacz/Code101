@@ -7,15 +7,15 @@ function isLEQzero(p) {
 }
 console.log(isLEQzero(4)); // almost und woher kommt das verdammte 'undefined'
 */
-let p = 0;
+
 function isLEQZero(p) {
     return p <= 0 //? console.log("true") : console.log("false");
-     
+
 }
 console.log(isLEQZero(3)); // WHY WHY WHY is there an undefined???? AAAAAAAAAAHHHHHHHHHHHH
-console.log(isLEQZero(0)); 
-console.log(isLEQZero(-4)); 
-console.log(isLEQZero(10)); 
+console.log(isLEQZero(0));
+console.log(isLEQZero(-4));
+console.log(isLEQZero(10));
 // Examples:
 
 // isLEQZero(3) ➞ false
@@ -31,7 +31,7 @@ console.log("--------Exercise-------");
 function dogAge(i) {
     return dogAge = i * 7;
 }
-console.log(`Your doggy is ${dogAge(2)} years in dog years!`);
+console.log(`Your doggy is ${dogAge(4)} years in dog years!`);
 // Example:
 
 // dogAge(4) ➞ "Your doggy is 28 years old in dog years!"
@@ -61,13 +61,13 @@ let months = ["January", "February", "March", "April", "May", "June", "July", "A
 
 //console.log(months[3 - 1]);
 
-function monthName() {
-    i = 1; i <=12;
-    return console.log(months[i+1]); 
+function monthName(num) {
+
+    return months[num - 1];
 }
-console.log(monthName(5));
-
-
+console.log(monthName(3));
+console.log(monthName(12));
+console.log(monthName(6));
 
 // For example, if you're given 3 as input, your function should return "March", because March is the 3rd month.
 //  here are the months array as a small help :)
@@ -83,7 +83,7 @@ console.log("--------Exercise-------");
 // Try to do it by yourself and don't look in yesterday solution. I trust you :)
 // Count Occurrences.
 // Create a function that accepts two arguments: a string and a letter. The function should count the number of occurrences of that letter in the string.
-const countOccurrences = (str, chr) => {
+/*const countOccurrences = (str, chr) => {
     let strIntoArr = str.split("");
     console.log(strIntoArr);
     let count = 0;
@@ -95,6 +95,9 @@ const countOccurrences = (str, chr) => {
     return count;
 }
 console.log(countOccurrences("I totally copy/past that from yesterday", "a"));
+*/
+const countOccurrences = (str, chr) => str.split(chr).length - 1;
+console.log(countOccurrences("Roman is helping me now", "i"));
 // Example:
 
 // countOccurrences("this is a string", "i") ➞ 3
@@ -123,6 +126,7 @@ Third shape
 Bounce: Forth shape
 Be creative and show us your Artistic side
 */
+
 let draw = "T";
 for (i = 1; i <= 4; i++) {
     console.log(draw.repeat(i));
@@ -155,14 +159,16 @@ console.log("--------Exercise-------");
 1234
 12345
  */
+
+let str = ``;
 const numbersCount = () => {
     for (let i = 0; i <= 5; i++) {
-        // something
+        str += `\n`;
         for (let j = 1; j <= i; j++) {
-            // something
+            str += j;
         }
         // something
-    }
+    } console.log(str);
 };
 numbersCount();
 /*Bonus: create another function by doing some changes to the previous function in order to have the following outputs :
@@ -172,6 +178,18 @@ numbersCount();
   12
   1
 */
+str = ``;
+const numbersCountBackwards = () => {
+    for (let i = 5; i >= 0; i--) {
+        str += `\n`;
+        for (let j = 5; j >= i; j--) {
+            str += j;
+        }
+        // something
+    } console.log(str);
+};
+numbersCountBackwards();
+
 
 console.log("--------Exercise-------");
 /* create a function should that checks if a store contains a specific product in it's inventory.
@@ -183,6 +201,11 @@ inventoryCheck("cheese") returns true
 inventoryCheck( "ham") returns false 
 */
 let storeArr = ["milk", "eggs", "cheese", "butter"];
+function inventoryCheck(str){
+    return str == storeArr;
+}
+console.log(inventoryCheck("cheese"));
+console.log(inventoryCheck("ham"));
 
 console.log("--------Exercise-------");
 // Extra work :)
