@@ -1,10 +1,18 @@
 console.log("--------Exercise-------");
 // Create a function that takes a number as its only argument and returns true if it's less than or equal to zero, otherwise return false.
 
+/*
 function isLEQzero(p) {   
     p == 0 ? console.log(`true`) : console.log(`false`);
 }
-console.log(isLEQzero(4));
+console.log(isLEQzero(4)); // almost und woher kommt das verdammte 'undefined'
+*/
+
+function isLEQZero(p) {
+    p <= 0 ? console.log("true") : console.log("false");
+}
+console.log(isLEQZero(8));
+
 // Examples:
 
 // isLEQZero(3) ➞ false
@@ -16,8 +24,8 @@ console.log("--------Exercise-------");
 
 //  Dog Y(ars. Create a function which calculates how old a dog is in dog years. The function should accept one argument that is the dog's age in human years.
 //PS:  calculate the dog's age in dog years based on the calculation of 1 human year = 7 dog years.
-let i = Number;
-function  dogAge(i) {
+
+function dogAge(i) {
     return dogAge = i * 7;
 }
 console.log(`Your doggy is ${dogAge(2)} years in dog years!`);
@@ -31,11 +39,11 @@ console.log("--------Exercise-------");
 // You just won a lifetime supply of your favorite snack! The snack company needs to calculate what that actually means and how much they need to give you over your "lifetime". Create a function to help you calculate that amount for yourself to make sure you get the right amount. The function should accept two arguments: person age and the amount he will eats per day. The function should calculate the amount that will be consumed for the rest of your life given a constant maximum age of 100.
 age = Number;
 sn = Number;
-function calcLifetimeSupply(age, sn){
-    i = 100-age; i <=100; i++;
-    return calcLifetimeSupply = i *sn;
+function calcLifetimeSupply(age, sn) {
+    i = 100 - age; i <= 100; i++;
+    return calcLifetimeSupply = i * sn;
 }
-console.log(`The snack company should provide you with ${calcLifetimeSupply(24,2)} units, until you are a ripe old age of 100. Happy snacking!`);
+console.log(`The snack company should provide you with ${calcLifetimeSupply(24, 2)} units, until you are a ripe old age of 100. Happy snacking!`);
 // Examples:
 
 // calcLifetimeSupply(25, 2) ➞ "The snack company should provide you with 54,788 units, until you are a ripe old age of 100. Happy snacking!"
@@ -46,13 +54,13 @@ console.log("--------Exercise-------");
 //  Number to Month Name
 // Create a function that takes a number (from 1 to 12) and returns its corresponding month name as a string.
 
-let months = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ];
+let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
-console.log(months[3-1]);
+console.log(months[3 - 1]);
 
 function monthName(i) {
-    i = 0; i <=12;
-    return monthName = months[i-1];
+    i = 0; i <= 12;
+    return monthName = months[i - 1];
 }
 console.log(monthName(3));
 // For example, if you're given 3 as input, your function should return "March", because March is the 3rd month.
@@ -69,13 +77,27 @@ console.log("--------Exercise-------");
 // Try to do it by yourself and don't look in yesterday solution. I trust you :)
 // Count Occurrences.
 // Create a function that accepts two arguments: a string and a letter. The function should count the number of occurrences of that letter in the string.
-
+const countOccurrences = (str, chr) => {
+    let strIntoArr = str.split("");
+    console.log(strIntoArr);
+    let count = 0;
+    for (let i = 0; i < strIntoArr.length; i++) {
+        if (strIntoArr[i] == chr) {
+            count++;
+        }
+    }
+    return count;
+}
+console.log(countOccurrences("I totally copy/past that from yesterday", "a"));
 // Example:
 
 // countOccurrences("this is a string", "i") ➞ 3
 
 console.log("--------Exercise-------");
 /*  draw this shapes in your console
+
+
+
 First shape
 T
 TT
@@ -95,6 +117,29 @@ Third shape
 Bounce: Forth shape
 Be creative and show us your Artistic side
 */
+let draw = "T";
+for (i = 1; i <= 4; i++) {
+    console.log(draw.repeat(i));
+}
+draw = "*";
+for (i = 4; i >= 1; i--) {
+    console.log(draw.repeat(i));
+}
+draw = "12345";
+let text = "";
+for (i = 1; i <= 5; i++) {
+    text += i; 
+}
+console.log(text);
+
+text = "";
+for (let i = 1; i <= 5; i++) {
+    for (let j = 0; j < 4; j++) {
+        text += i + " ";
+    }
+}
+console.log(text.repeat(1));
+
 
 console.log("--------Exercise-------");
 /*  Finish the following function so it outputs looks like this:
@@ -103,7 +148,8 @@ console.log("--------Exercise-------");
 123
 1234
 12345
- const numbersCount = () => {
+ */
+const numbersCount = () => {
   for (let i = 0; i <= 5; i++) {
     // something
     for (let j = 1; j <= i; j++) {
@@ -113,7 +159,7 @@ console.log("--------Exercise-------");
   }
 };
 numbersCount();
-Bonus: create another function by doing some changes to the previous function in order to have the following outputs :
+/*Bonus: create another function by doing some changes to the previous function in order to have the following outputs :
   12345
   1234
   123
