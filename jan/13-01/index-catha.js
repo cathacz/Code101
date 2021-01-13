@@ -325,7 +325,7 @@ const isEqualNumXandO = (str) => {
     let newStr = str.toLowerCase();
     let countX = 0;
     let countO = 0;
-    for (let i = 0 ; i < newStr.length; i++) {
+    for (let i = 0; i < newStr.length; i++) {
         if (newStr[i] == "x") {
             countX++;
         }
@@ -334,12 +334,13 @@ const isEqualNumXandO = (str) => {
         }
     }
 
-if (countX === countO) {
-     return true;
-} else {
-    return false;}
-  
- 
+    if (countX === countO) {
+        return true;
+    } else {
+        return false;
+    }
+
+
 };
 
 console.log(isEqualNumXandO("ooxx"));
@@ -369,7 +370,62 @@ const tipping = (billONE, billTWO, billTHREE) => {
     const fifteenP = 1.15;
     const twentyP = 1.2;
 
-    return `Bill One: ${billONE*tenP}€ Bill Two: ${billTWO*fifteenP}€ Bill Three: ${billTHREE*twentyP}€`
+    return `Bill One: ${billONE * tenP}€ Bill Two: ${billTWO * fifteenP}€ Bill Three: ${billTHREE * twentyP}€`;
 
 }
 console.log(tipping(22.35, 26.67, 35.92));
+
+
+// some looping
+
+// Write a function that accepts a sentence and a word. The function should return the number of times that word is
+// in a string.
+// #### Examples:
+//howManyTimes(“The talk of the town”, “the”));//2
+
+console.log("-----------------------------------------------------------WHY");
+const countOccurrences1 = (sentence, word) => {
+    // let result = sentence.split(word);
+
+    // let counter = 0;
+    // for (let i = 0; i < result.length; i++) {
+    //   if (result[i] == word) {
+    //     counter++;
+    //     return result;
+    //   }
+    // }
+    let newSen = sentence.toLowerCase();
+    let result = newSen.split(word).length-1;
+    return result;
+};
+console.log(countOccurrences1("The talk of the the the the town", "of"));
+
+
+const thisCantBeSoHard = (satz, wort) => {
+    let newSatz = satz.toLowerCase();
+    let result = newSatz.split(wort);
+    let counter = 0;
+    for (i = 0; i < result.length; i++) {
+        if (result[i] == wort) {
+            counter++;
+        }
+    }
+    return counter;
+};
+
+console.log(thisCantBeSoHard("The talk of the town", "the"));
+
+const countOccurrencesW = (str, letter) => {
+    let result = str.split("");
+    // console.log(result);
+    let counter = 0;
+    for (let i = 0; i < result.length; i++) {
+        if (result[i] == letter) {
+            counter++;
+        }
+    }
+
+    return counter;
+};
+console.log("works: "+countOccurrencesW("this is a string", "i")); // expected 3
+console.log("works: "+countOccurrencesW("xoxo, gossip girl", "p")); // expected 3
