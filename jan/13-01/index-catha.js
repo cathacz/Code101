@@ -82,6 +82,21 @@ console.log("--------Exercise 5-------");
 // Count Occurrences.
 // Create a function that accepts two arguments: a string and a letter. The function should count the number of occurrences of that letter in the string.
 
+const countOccurrences = (str, letter) => {
+    let result = str.split("");
+    // console.log(result);
+    let counter = 0;
+    for (let i = 0; i < result.length; i++) {
+        if (result[i] == letter) {
+            counter++;
+        }
+    }
+
+    return counter;
+};
+console.log(countOccurrences("this is a string", "i")); // expected 3
+console.log(countOccurrences("xoxo, gossip girl", "o")); // expected 3
+
 // Example:
 
 // countOccurrences("this is a string", "i") ➞ 3
@@ -147,12 +162,12 @@ Bonus: create another function by doing some changes to the previous function in
 */
 const numbersCount = () => {
     let text;
-    for (let i = 5 ; i >= 0; i--) {
+    for (let i = 5; i >= 0; i--) {
         // something
         text = "";
         for (let j = 1; j <= i; j++) {
-        // something
-        text += j;
+            // something
+            text += j;
         }
         // something
         console.log(text);
@@ -194,6 +209,37 @@ console.log("--------Exercise 9-------");
 // create a repo for this app. we are coming later to it :)
 // Create a program that generate a random password with the length of 30 character, every time you call the function should give you a different password
 
+
+const passwordGen = () => {
+    let allCharacters = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "!", "$", "§", "%", "&", "/", "(", ")", "=", "?", "A", "B", "C", "D", "E", "F",];
+    let result = "";
+    let randomNum;
+    for (let i = 0; i <= 30; i++) {
+        randomNum = Math.floor(Math.random() * allCharacters.length); //need to be inside the loop!!
+        result += allCharacters[randomNum]; //>> result = result + allCharacters[randomNum]>> so every character is random!
+
+    }
+    return result;
+};
+
+console.log(`New Password: ${passwordGen()}`);
+
+
+// ------------------------------------------------------------------------other way
+/*
+let numbers = [0,1,2,3,4,5,6,7,8,9];
+let characters = ["a","b","c"];
+
+const passGen = () => {
+    let result = "";
+    for (let i = 0; i <17; i++) {
+        if (i%2==0){
+            randomNum = Math.floor(Math.random()* numbers.length);
+            result += 
+        } else 
+    };
+};
+*/
 // Examples you will have other passwords for sure
 
 // passwordGen()  ➞ Y3mI9x7bvPY86T?oM§hIbgh!MLwA77N
@@ -205,11 +251,17 @@ console.log("-----------------------------------------------------------------St
 
 // default value
 
+const saveData = (userName = "No Name", kids = 0) => {
+    userData = userName;
+};
+saveData();
+console.log(userData);
+
 const defVal = (dV = "Catha fetzt") => {
     return dV;
 };
 console.log(defVal("Hey there"));
-console.log(defVal); // he was too fast (angry smily)
+console.log(defVal()); // he was too fast (angry smily)
 
 const nA = ["Catha", "fetzt", "hart"];
 console.log(nA[1][2, 3]);
@@ -235,16 +287,16 @@ for (let i = 100; i > 100; i++) {
 
 const numbersCountExplained = () => {
     let text; // empty --------------------------------------------step 2
-    for (let i = 5 ; i >= 0; i--) { // start loop --------------- step 3 
-        
+    for (let i = 5; i >= 0; i--) { // start loop --------------- step 3 
+
         text = ""; // initial with empty text -------------------step 4 
         for (let j = 1; j <= i; j++) { // start loop in lopp ---- step 5
-        
-        text += j; // grap text plus j (=1) ---------------------- step 6
-        // add 1 j = 2 (still less than 5) do it
-        //...
-        // add 1 j = 5 (equal 5) do it 
-        // add 1 j = 6 (more than 5) EXIt loop -----------------------step 7
+
+            text += j; // grap text plus j (=1) ---------------------- step 6
+            // add 1 j = 2 (still less than 5) do it
+            //...
+            // add 1 j = 5 (equal 5) do it 
+            // add 1 j = 6 (more than 5) EXIt loop -----------------------step 7
         }
         console.log(text);
     }
@@ -256,3 +308,68 @@ numbersCountExplained(); // call function -------------------------------- step 
 
 // i = 5 assign 5 to i; i >=5 escape loop; 
 // j = 1 ; j <= i works cuz 1 >= 5; 
+
+// 11. XO Create a function that takes a string, checks if it has the same number of ’x’s and ’o’s and returns either true or false.
+// Notes:
+// Return a boolean value (true or false).
+// The string can contain any character.
+// When neither an x nor an o is in the string, return true.
+// Examples:
+// isEqualNumXandO(“ooxx”) ➞ true
+// isEqualNumXandO(“xooxx”) ➞ false
+// isEqualNumXandO(“ooxXm”) ➞ true (case insensitive)
+// isEqualNumXandO(“zpzpzpp”) ➞ true (returns true if no x and o)
+// isEqualNumXandO(“zzoo”) ➞ false
+
+const isEqualNumXandO = (str) => {
+    let newStr = str.toLowerCase();
+    let countX = 0;
+    let countO = 0;
+    for (let i = 0 ; i < newStr.length; i++) {
+        if (newStr[i] == "x") {
+            countX++;
+        }
+        if (newStr[i] == "o") { // if newStr.includes["o"]
+            countO++;
+        }
+    }
+
+if (countX === countO) {
+     return true;
+} else {
+    return false;}
+  
+ 
+};
+
+console.log(isEqualNumXandO("ooxx"));
+console.log(isEqualNumXandO("xooxx"));
+
+
+
+const xANDos = (str, letter) => {
+    let result = str.split("");
+    // console.log(result);
+    let counter = 0;
+    for (let i = 0; i < result.length; i++) {
+        if (result[i] == "x" / "o") {
+            counter++;
+        }
+    }
+
+    return counter;
+};
+console.log(xANDos("ooxx"));
+
+
+// calculating Tipps
+
+const tipping = (billONE, billTWO, billTHREE) => {
+    const tenP = 1.1;
+    const fifteenP = 1.15;
+    const twentyP = 1.2;
+
+    return `Bill One: ${billONE*tenP}€ Bill Two: ${billTWO*fifteenP}€ Bill Three: ${billTHREE*twentyP}€`
+
+}
+console.log(tipping(22.35, 26.67, 35.92));
