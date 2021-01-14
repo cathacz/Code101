@@ -1,7 +1,7 @@
-//declair varibals: let, const, var
+//declare variables: let, const, var
 let x = 23; // can be changed later on, not hoisted
 const y = 76; // cannot be changed , stays
-var z = 91; // global variböe (old skool) = let but var ist hoisted, let not hoisted
+var z = 91; // global variable (old skool) = let but var ist hoisted, let not hoisted
 //hoisting --- read that
 
 //string
@@ -64,8 +64,8 @@ console.log(Math.random()); //creates number between 0 and 1
 console.log(Math.floor(Math.random() * 6) + 1); // imagine a Dice 
 
 // grap random character from string
-let grab = "Grap a random character from this string.";
-let randomGrab = Math.floor(Math.random() * grab.length); // creates random number innerhalb von string "grab"
+let grab = "Grab a random character from this string.";
+let randomGrab = Math.floor(Math.random() * grab.length); // creates random number within string "grab"
 console.log(grab[randomGrab]); // grabs character from string "grab" with random generated position (number) with "randomGrab"
 
 
@@ -92,20 +92,37 @@ console.log("totally ignoring the 'else' part"); // works without "else"
 
 
 // function
-
-function fun(num1, num2) {// old skool way to declair a function
+//           arguments (num1, num2)
+function fun(num1, num2) {// old skool way to declare a function
     let numSum = num1 * num2;
     return numSum;
-};
+};//            parameters ( 3, 9)
 console.log(fun(3, 9));  //btw NaN means "Not a Number"
 
 
                 //synchronis running line by line
 
 // we need: [] {} () <> ; : , . - _ / \ ! ? @ % $
+console.log(`:sob:`); // smilies don't work
 
-//array
+//Es6 function
+//never declare a function with let or var ALWAYS use const (can't be changed, can't get lost)
+const functionName = () => { //new way to write a function
+    return `an As6 function`
+};
+console.log(functionName()); 
 
+//array >> alway [!]
+//              0        1          2
+const arr = ["Catha", "Matthias", "Konstantin"];
+console.log(arr[2]);
+let arrNum = 1;
+console.log(arr[arrNum]);
+arrNum++; //adds 1 to arrNum 
+console.log(arr[arrNum]);
+
+const NumArray = [19, 84, 20, 16, 39, 932, 198, 2, 23, 8373, 71];
+console.log(NumArray[NumArray.length-1]);
 // for loop
 
 
