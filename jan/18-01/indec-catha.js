@@ -55,20 +55,143 @@ status("Matthias", 48);
 
 // stupid "game"
 
-/* cleaning optimization app  >> daily cleaning challenge
-breaking down shores in shorter "in between" tasks (5 minutes max.)
+/* cleaning optimization app  >> daily cleaning challenge (Promodoro-like)
+breaking down chores in shorter "in between" tasks (5 minutes max.)
 
-user enters sqm apartment, chooses room, chooses all-round shores, chooses specific shores, chooses once-in-a-while shores, can specify own shores, chooses how many shores per day
+user enters sqm apartment, chooses room, chooses all-round chores, chooses specific chores, chooses once-in-a-while chores, can specify own chores, chooses how many chores per day
 
 >> room (kitchen, bathroom, hall way, bedroom) >>default; rooms can be added living room, balcony
->> assign all-round shores (fighting chaos, vacuuming, wiping floor, dusting, collect item that belong in a different room, ...)
->> assign specific shores to rooms (cleaning toilet, washing dishes, ...)
->> assign once-in-a-while shores (cleaning windows, changing sheets...)
+>> assign all-round chores (fighting chaos, vacuuming, wiping floor, dusting, collect item that belong in a different room, ...)
+>> assign specific chores to rooms (cleaning toilet, washing dishes, ...)
+>> assign once-in-a-while chores (cleaning windows, changing sheets...)
 
-app chooses random shore to do in a specified time range (eg 1 week) repeats // doesn't show shore accordingly to frequency
+app chooses random chore to do in a specified time range (eg 1 week) repeats // doesn't show chore accordingly to frequency
 
 user can ask app so choose for them or enter full filled shores to cross out of algorithm 
 
 everything is clean – everybody is happy
 
 */
+
+//more stupid assignments
+
+// Capitalize.
+// Create a program that capitalizes the first letter of each element in an array of names. Examples:
+// [“matt”, “sara”, “lara”] ➞ [“Matt”, “Sara”, “Lara”]
+// [“samuel”, “MARIA”, “luke”, “mary”] ➞ [“Samuel”, “Maria”, “Luke”, “Mary”]
+// [“Cynthia”, “Karen”, “Jane”, “Carrie”] ➞ [“Cynthia”, “Karen”, “Jane”, “Carrie”]
+let names = ["samuel", "MARIA", "lUkE", "mary"];
+
+const capitalize = () => {
+  let capNames = "";
+  for (let i = 0; i < names.length; i++) {
+    capNames += `${names[i][0].toUpperCase()}${names[i]
+      .substring(1)
+      .toLowerCase()} `;
+  }
+  return capNames.split(" ");
+};
+console.log(capitalize(names)); //ALMOST määäh good enough...
+
+const cap = (arr) => {
+  for (let i = 0; i < arr.length; i++) {
+    arr[i] = arr[i][0].toUpperCase() + arr[i].substring(1).toLowerCase();
+  }
+  return arr;
+};
+console.log(cap(["samuel", "MARIA", "lUkE", "mary"]));
+
+// City Names.
+// Create an array of city names. Loop through the array and add the city names to a string. Examples:
+// [Berlin, Paris, Prague, Rome] ➞ expected output: “Berlin, Paris, Prague, Rome”.
+
+let cities = ["Berlin", "Paris", "Prague", "Rome"];
+
+const citiesInAString = () => {
+  let result = "";
+  for (let i = 0; i < cities.length; i++) {
+    result += `${cities[i]}, `;
+  }
+  return result;
+};
+console.log(citiesInAString(cities));
+
+const arrayToString = (arr) => {
+  let str = "";
+  for (let i = 0; i < arr.length; i++) {
+    str += arr[i];
+    if (i == arr.length - 1) {
+      str += ".";
+    } else {
+      str += ", ";
+    }
+  }
+  return str;
+};
+console.log(arrayToString(["Berlin", "Paris", "Prague", "Rome"]));
+
+// Hello
+//  Create an array filled with your friends’ or family’s names. Loop over the array and greet each friend. Bonus: Print the indexes of each item in the array. Examples:
+// [Maria, Mike, Paul, Doven] ➞ expected output: “Hello Maria! Hello Mike! Hello Paul! Hello Doven!”
+// Bonus [Susan, Rezvane, Mark] ➞ expected bonus output: “Susan is at index 0 of my friends and family array, Rezvane is at index 1 of my friends and family array, Mark is at index 2 of my friends and family array”.
+
+let friends = ["Lieschen", "Resi", "Matthias", "Konstantin"];
+for (let i = 0; i < friends.length; i++) {
+  switch (friends[i]) {
+    case "Lieschen":
+      console.log(" Hej Lieschen");
+      break;
+    case "Resi":
+      console.log(" Hej Resi");
+      break;
+    case "Matthias":
+      console.log(" Hej Matthias");
+      break;
+    case "Konstantin":
+      console.log(" Hej Konstantin");
+      break;
+    default:
+      console.log("Your are not my friend");
+      break;
+  }
+}
+
+const friendsGreeting = (arr) => {
+  str = "";
+  for (let i = 0; i < arr.length; i++) {
+    str += `Hello ${arr[i]} \n`;
+  }
+  return str;
+};
+console.log(friendsGreeting(["Lieschen", "Resi", "Matthias", "Konstantin"]));
+// Odds and Evens.
+// Create a program that changes a given array by adding 1 to each odd integer and subtracting 1 from each even integer. Examples:
+// [3, 5, 2, 4] ➞ expected output: [4, 6, 1, 3]
+// [6, 9, 10, 20] ➞ expected output: [5, 10, 9, 19]
+
+let zahlen = [3, 5, 2, 4];
+
+const rechnenOderSo = () => {
+  let result;
+  for (let i = 0; i < zahlen.length; i++) {
+    if (zahlen[i] % 2) {
+      console.log(zahlen[i] - 1);
+    } else {
+      console.log(zahlen[i] - 1);
+    }
+  }
+};
+
+console.log(rechnenOderSo(zahlen));
+
+const oddOReven = (arr) => {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 2) {
+      // dont need the == 0
+      console.log(arr[i] + 1);
+    } else {
+      console.log(arr[i] - 1);
+    }
+  }
+};
+oddOReven([3, 5, 2, 4]);
