@@ -87,5 +87,54 @@ console.log(nam);
 
 const dest = ["Bali", "Mount Everest", "Las Vegas", "New York", "Loch Ness"];
 console.log(dest);
-let copyDest = dest.slice(1, 2);
+let copyDest = dest.slice(1, 2); // 2-1 = 1 is what you will get > 1 item
 console.log(copyDest);
+let copyDest2 = dest.slice(-2); // counting from last item 2 items
+console.log(copyDest2);
+
+// =========================== ASSIGNMENT TIME ============================
+
+// Repeat it.
+// Create a program with two variables: “item” and “times”. Create a program that repeats the “item” as many times as specified by “times”. The first variable (“item”) is the item that needs repeating while the second argument (“times”) is the number of times the item is to be repeated. Print the result in an array. Examples:
+// (“example”, 3) ➞ [“example”, “example”, “example”]
+
+// let item = "Catha";
+// let time = 7;
+
+// let array = [];
+// const pushIT = (item, time) => {
+//   for (let i = 0; i < time; i++) {
+//     let result;
+//     result += array.push(item, time);
+//   }
+// };
+// pushIT();
+// console.log(array);
+
+const rep = (item, time) => {
+  let result = [];
+  for (let i = 0; i < time; i++) {
+    result.push(item);
+  }
+  return result;
+};
+console.log(rep("Catha", 7));
+
+// The Greater Numbers.
+//  Create a function which accepts two arguments: the first argument being an array of numbers, and the second argument being a number. The function should return the elements of the array which are greater than the second argument.
+// i.e.
+// findGreatest([3, 4, 5], 4) ➞ 5
+// findGreatest([10, 20, 30], 12) ➞ 20, 30
+// findGreatest([0, 10, 3], 4) ➞ 10
+
+const findGreatest = (arr, num) => {
+  let result = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > num) {
+      result.push(arr[i]);
+    }
+  }
+  return result.join(", ");
+};
+
+console.log(findGreatest([3, 4, 12, 24], 10));
