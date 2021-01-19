@@ -54,12 +54,38 @@ console.log(nam);
 for (let i = 0; i < nam.length; i++) {
   console.log(nam[i]);
 }
-
+//.split > splits strings into arrays
 let str = "hej there, it's me – did you miss me?";
 let newArr = str.split(" "); //needs a criteria (case sensitive) ----------- .split
 let newArrLen = str.split(" ").length;
 console.log(newArrLen);
 console.log(newArr);
-
-let newStr = newArr.join(" ");
+//.join > joins arrays to strings together
+let newStr = newArr.join(" "); // needs criteria as well ------------------- .join
 console.log(newStr);
+
+//.concat > merges two (or more) arrays
+
+let arr1 = [1, 34, 578];
+let arr2 = [84, 91, 747];
+
+let arr3 = arr1.concat(arr2); //-------------------------------------------- .concat
+console.log(arr3);
+
+arr3 = arr1.concat(arr2, [666, 667, 668]);
+console.log(arr3);
+
+//. slice > makes a shallow copy
+let fakeCopy = nam; // called reference  – if you push eg it also changes original (nam)
+console.log(fakeCopy); // alt+ d >> highlights all similar words
+
+let shallowCopy = nam.slice(); //------------------------------------------- .slice
+console.log(shallowCopy);
+shallowCopy.push("Horst"); // only adds in shallow copy not in the original
+console.log(shallowCopy);
+console.log(nam);
+
+const dest = ["Bali", "Mount Everest", "Las Vegas", "New York", "Loch Ness"];
+console.log(dest);
+let copyDest = dest.slice(1, 2);
+console.log(copyDest);
