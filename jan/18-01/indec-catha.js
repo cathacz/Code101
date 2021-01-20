@@ -190,7 +190,7 @@ const oddOReven = (arr) => {
       // dont need the == 0
       console.log(arr[i] + 1);
     } else {
-      console.log(arr[i] - 1);
+      console.log(arr[i] - 1); // make arr[i] into a new variable CLEAN CODE (don't declare variable in loop)
     }
   }
 };

@@ -1,4 +1,4 @@
-// I thought tomorrow is off and it will be nice to practice a bit more, so here are some fun exercises >> we have a different understanding of "fun" ;)
+s// I thought tomorrow is off and it will be nice to practice a bit more, so here are some fun exercises >> we have a different understanding of "fun" ;)
 
 function display(str) {
     console.log(str);
@@ -88,7 +88,6 @@ display(Math.round(7.49999999));
 function oddEven (num) {
     return num % 2 == 0 ? "even" : "odd";
 }
-
 display(oddEven(59));
 
 function oddOReven(num){

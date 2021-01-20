@@ -49,4 +49,35 @@ let newArr6 = arr6.fill(101, 1, 3); // (what, from, to) replaces existing items
 // fill(what, from)>> replaces from position "from" all remaining items
 console.log(newArr6);
 
-// ========================================================= -1 means always nothing found
+// do & while are kind of a loop >> but dizygotic twins
+// -------------------------------------------------------------------------------------- do
+// with do – we do it at least one time!
+
+let counter = 0; //v declare counter outside loop
+do {
+  // if false (eg counter = 20) will ignore the do part and just print out counter ONE time
+  console.log(counter);
+  counter++;
+  let count = 0;
+  //   do {
+  //     console.log("nested " + count);
+  //     count++;
+  //   } while (count <= 2);
+} while (counter <= 10); // stops when condition reached
+
+// -------------------------------------------------------------------------------------- while
+// if condition not full-filled while ignores loops – you get nothing
+
+let loopOne = 0;
+while (loopOne < 5) {
+  loopOne++; //adds up before printing out
+  console.log(loopOne);
+}
+
+//more conditions possible with do-loop (than for-loop)
+
+// ========================================================= -1 means ALWAYS nothing found
+// ================================================= NO returns in loops (return belong in functions)
+
+
+

@@ -155,7 +155,7 @@ const lottoGen = () => {
     for (j = 1; j <= 49; j++) {
       randomNum = Math.ceil(Math.random() * j); // mit Math.floor 0 dabei...
     }
-    result += `${randomNum},`; // numbers can repeat...
+    result += `${randomNum},`; // numbers can repeat... but why? bzw how to fix that?
   }
   return result;
 };

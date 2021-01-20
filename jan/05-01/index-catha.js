@@ -9,7 +9,7 @@
 sum(3, 4);
 function sum (x, y) {
     return x + y;
-    x+y+x+x+x+y;
+    //x+y+x+x+x+y;
 }
 console.log(sum(6,9));
 

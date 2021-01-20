@@ -277,5 +277,175 @@ switch (howManyKids) {
     console.log("you have too many children");
     break;
   default:
-    console.log("your uterus broke");
+    console.log("your uterus broke or you are insane");
 }
+
+// more STUFF
+
+const nam = ["Lieschen", "Resi", "Matthias", "Konstantin"];
+const sym = ["§", "%", "&", "/"];
+console.log(nam.length); // to get number of elements in an array (human counting)
+console.log(nam[nam.length - 1]); // to access the last item
+
+let cityName = [];
+console.log(cityName.length);
+cityName[1] = "Salzburg"; //create item to array !overwrites existing items!
+console.log(cityName);
+
+let ciNa = [];
+console.log(ciNa.length);
+ciNa[0] = "Salzburg";
+ciNa[1] = "Graz";
+ciNa[2] = "Innsbruck";
+console.log(ciNa);
+ciNa.push("Wien"); // adds item after last item ----------------------------- .push
+console.log(ciNa);
+
+ciNa.pop(); //removes last item --------------------------------------------- .pop
+console.log(ciNa);
+let removedItem = ciNa.pop(); //store removed items in new variable
+console.log(ciNa);
+console.log(removedItem);
+
+ciNa.unshift("Bregenz"); //adds an item to first position ------------------- .unshift
+console.log(ciNa);
+ciNa.shift(); //removes first item ------------------------------------------ .shift
+console.log(ciNa);
+let remIT = ciNa.shift();
+console.log(ciNa);
+console.log(remIT);
+
+//const nam = ["Lieschen", "Resi", "Matthias", "Konstantin"];
+console.log(nam.indexOf("Resi")); // counts js style ------------------------ .indexOf
+
+let pos = nam.indexOf("Matthias"); // number – which position will be removed
+console.log(pos);
+let n = 2; //how many items will be removed
+let removed = nam.splice(pos, n); // ---------------------------------------- .splice
+console.log(removed);
+console.log(nam);
+
+nam.splice(0, 1); // removed 1 item on position 0 (Lieschen)
+console.log(nam);
+
+//need new friend (old ones have been removed 😞)
+nam.push("Sarah");
+nam.unshift("Max");
+nam[3] = "Marco";
+
+console.log(nam);
+
+for (let i = 0; i < nam.length; i++) {
+  console.log(nam[i]);
+}
+//.split > splits strings into arrays
+let str = "hej there, it's me – did you miss me?";
+let newArr = str.split(" "); //needs a criteria (case sensitive) ----------- .split
+let newArrLen = str.split(" ").length;
+console.log(newArrLen);
+console.log(newArr);
+//.join > joins arrays to strings together
+let newStr = newArr.join(" "); // needs criteria as well ------------------- .join
+console.log(newStr);
+
+//.concat > merges two (or more) arrays
+
+let arr1 = [1, 34, 578];
+let arr2 = [84, 91, 747];
+
+let arr3 = arr1.concat(arr2); //-------------------------------------------- .concat
+console.log(arr3);
+
+arr3 = arr1.concat(arr2, [666, 667, 668]);
+console.log(arr3);
+
+//. slice > makes a shallow copy
+let fakeCopy = nam; // called reference  – if you push eg it also changes original (nam)
+console.log(fakeCopy); // alt+ d >> highlights all similar words
+
+let shallowCopy = nam.slice(); //------------------------------------------- .slice
+console.log(shallowCopy);
+shallowCopy.push("Horst"); // only adds in shallow copy not in the original
+console.log(shallowCopy);
+console.log(nam);
+
+// ways to initialize arrays
+
+// best way (so far) --------------------------------------------------------------
+const arr1 = [];
+arr1.push("cat");
+console.log(arr1);
+const arr2 = ["dog", "mouse"];
+
+//new array with the NEW-method -------------------------------------------------  new
+
+const arr3 = new Array(); // Capital A (Object) > initialize empty NEW array
+
+console.log(arr3);
+
+// const str1 = new String();
+// console.log(str1);
+
+// const num1 = new Number();
+// console.log(num1);
+
+//making a new array -------------------------------------------------------------- .of
+const arr4 = Array.of(1, 3, 8, 48, 92);
+console.log(arr4);
+
+// sorting items in an array (by using UTF-16 code)-------------------------------- .sort
+let alpha = ["c", "r", "w", "m", "C", 8, "%"];
+let sortAlpha = alpha.sort();
+console.log(sortAlpha); // order: special char., numbers, capitals, smalls
+
+// to reverse an array > first is last and last is first -------------------------- .reverse
+let revArr = [2, 3, 88, 9, 7]; //> [7, 9, 88, 3, 2]
+let revArrRev = revArr.reverse();
+console.log(revArrRev);
+console.log(typeof revArrRev); //answer: object
+
+// tells me true or false if it is an array --------------------------------------- .isArray()
+let bool = Array.isArray(revArr);
+console.log(bool);
+
+//will start searching backwards (-1 means nothing found) ------------------------- .lastIndexOf()
+const arr5 = ["you", "go", "home", "you", "loser"]; // will never show the first "you"
+console.log(arr5.lastIndexOf("you"));
+console.log(arr5.indexOf("you"));
+//.indexOf would gives you the first "you"
+
+// adds item(s) to array ----------------------------------------------------------- .fill()
+let arr6 = [22, 55, 7, 78, 99, 125, 2456];
+let newArr6 = arr6.fill(101, 1, 3); // (what, from, to) replaces existing items
+// fill(what, from)>> replaces from position "from" all remaining items
+console.log(newArr6);
+
+// do & while are kind of a loop >> but dizygotic twins
+// -------------------------------------------------------------------------------------- do
+// with do – we do it at least one time!
+
+let counter = 0; //v declare counter outside loop
+do {
+  // if false (eg counter = 20) will ignore the do part and just print out counter ONE time
+  console.log(counter);
+  counter++;
+  let count = 0;
+  //   do {
+  //     console.log("nested " + count);
+  //     count++;
+  //   } while (count <= 2);
+} while (counter <= 10); // stops when condition reached
+
+// -------------------------------------------------------------------------------------- while
+// if condition not full-filled while ignores loops – you get nothing
+
+let loopOne = 0;
+while (loopOne < 5) {
+  loopOne++; //adds up before printing out
+  console.log(loopOne);
+}
+
+//more conditions possible with do-loop (than for-loop)
+
+// ========================================================= -1 means ALWAYS nothing found
+// ================================================= NO returns in loops (return belong in functions)

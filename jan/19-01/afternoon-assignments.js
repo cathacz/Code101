@@ -3,6 +3,7 @@
 // i.e. findVowels(“this is a string”) ➞ 4
 console.log("================== 1ST ASSIGNMENT ==================");
 
+// alway do .toLowerCase wit the input string/array
 const findVowels = (str) => {
   let result;
   let splt = str.split("");
@@ -24,6 +25,8 @@ const findVowels = (str) => {
 };
 console.log(findVowels("in your face – I f***ing did it")); //not case sensitive
 console.log(findVowels("this is a string"));
+
+// ===== check ou Hadis solution later =====
 
 // No Duplicates!
 //  A set is a collection of unique items. A set can be formed from an array by removing all duplicate items. Create a program which transforms an array into a set of unique values. See the examples below. Example:
@@ -51,6 +54,24 @@ console.log(noDup([1, 4, 4, 7, 7, 7]));
 console.log(noDup([1, 6, 6, 9, 9]));
 console.log(noDup([2, 2, 2, 2, 2, 2]));
 console.log(noDup([5, 10, 15, 20, 25]));
+
+// ===== Hadis solution for Duplicates ======
+
+const cleanUp = (arr) => {
+  let result = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (!result.includes(arr[i])) {
+      //! if it is NOT included- add it
+      result.push(arr[i]);
+    }
+  }
+
+  return result;
+};
+console.log(cleanUp([1, 4, 4, 7, 7, 7]));
+console.log(cleanUp([1, 6, 6, 9, 9]));
+console.log(cleanUp([2, 2, 2, 2, 2, 2]));
+console.log(cleanUp([5, 10, 15, 20, 25]));
 
 // Dictionary. (take your time on this pls ) also as tip you can use .includes()
 //  Create a function that takes an initial string and an array of words, and returns a filtered array of the words that start with the same letters as the initial string.

@@ -111,7 +111,7 @@ let p = true;
 let q = false;
 let r = 11 == 23;
 if (p == q && r != p || r == p) {
-    console.low("WOW");
+    console.log("WOW");
 } else { console.log("I don't know what you want from me"); };
 
 console.log("The odd/even reporter");
@@ -168,7 +168,7 @@ console.log(text);
 console.log("----------------------hej there you are");
  let countNum = 0;
 text = "";
- for (let i = 0; i <= 4;) {text += i + " ";
+ for (let i = 1; i <= 4;) {text += i + " ";
       if (countNum != 0 && countNum % 3 == 0) {i++; countNum = 0;}
      countNum++}
 console.log(text);

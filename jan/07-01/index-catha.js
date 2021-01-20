@@ -165,7 +165,5 @@ function radians_to_degrees(radians) // am Taschenrechner DEG
 console.log(radians_to_degrees(Math.asin(gk/hy)));
 
 
-// display(Math.fround(7.9292937352849503635))
-// display(Math.sign)
-// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
+// Find MATH Stuff here: >> https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
 
