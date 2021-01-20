@@ -73,6 +73,23 @@ console.log(cleanUp([1, 6, 6, 9, 9]));
 console.log(cleanUp([2, 2, 2, 2, 2, 2]));
 console.log(cleanUp([5, 10, 15, 20, 25]));
 
+const cleanUp2 = (arr) => {
+  let result = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === arr[i + 1]) {
+      do {
+        arr.splice(i, 1);
+      } while (arr[i] === arr[i + 1]);
+    }
+  }
+
+  return result;
+};
+console.log(cleanUp2([1, 4, 4, 7, 7, 7]));
+console.log(cleanUp2([1, 6, 6, 9, 9]));
+console.log(cleanUp2([2, 2, 2, 2, 2, 2]));
+console.log(cleanUp2([5, 10, 15, 20, 25]));
+
 // Dictionary. (take your time on this pls ) also as tip you can use .includes()
 //  Create a function that takes an initial string and an array of words, and returns a filtered array of the words that start with the same letters as the initial string.
 // Notes:
