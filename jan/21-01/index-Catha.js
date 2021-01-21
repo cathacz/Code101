@@ -119,7 +119,7 @@ for (let i = 1; i <= 10; i++) {
 //skipping an interaction
 for (let i = 1; i <= 10; i++) {
   if (i == 4) {
-    continue;
+    continue; //not printing out 4
   } else {
     console.log(i);
   }
