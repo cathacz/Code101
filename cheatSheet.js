@@ -1,11 +1,12 @@
+console.log("===== superAwesomeCheatSheet =====");
 //declare variables: let, const, var
 let x = 23; // can be changed later on, not hoisted
 const y = 76; // cannot be changed , stays
 var z = 91; // global variable (old skool) = let but var ist hoisted, let not hoisted
 //hoisting --- read that
 
-//string
-let str = "This is a string";
+// ----------------------------------------------------------------------------------------------- string
+let str = "This is a string"; //
 
 //bracket notions: [] grab letter from string;
 console.log(str[8]);
@@ -14,6 +15,7 @@ console.log(str[8]);
 let newLine = "first line \n second line";
 console.log(newLine);
 
+// ----------------------------------------------------------------------------------------------- numbers
 //numbers --- all the basic math + - / * (not a function it is a method)
 let o = 5;
 let p = 7;
@@ -22,38 +24,38 @@ console.log(o * p); // 5 * 7 = 35
 let rechnung = o * p + 5;
 console.log(rechnung);
 
-// float numbers
+// ----------------------------------------------------------------------------------------- float numbers
 let float = 22.45;
 console.log(typeof float); // tells you number
 
 // console(OBJECT).log(METHOD)(something(DEPENDS))
 
-//boolean (Wahrheitswert (true/false))
+//boolean (Wahrheitswert (true/false)) ----------------------------------------------------------- boolean
 let bool = true;
 console.log(bool);
 let check = 12 < 72;
 console.log("check: ", check);
 // typeof = small function that tells what type a variable or stuff is like
 
-// conditions;
+// ------------------------------------------------------------------------------------------- conditions;
 // = (assigning value to variable)
 // == (equal [type doesn't matter])
 // === (comparing value and type, both must fit)
 // !== (not equal)
 let q = true;
-console.log(!q); // ! makes false true & true false
+console.log(!q); // ---------------------- ! makes false true & true false
 // >= (bigger or equal)
 // <= (smaller or equal)
 // > (bigger)
 // < (smaller)
 
-// ternary Operator
+// ternary Operator (bedingter Operator) --------------------------------------------------------- ? _ : _
 //                truthy : falsy
 console.log(true ? "yay" : "nay");
 console.log(176 > 987 ? "yay" : "nay");
 console.log(136 == 987 ? 1 : 0);
 
-// Math.stuff: Js methods from Math(.max, .min, .random, .floor, .ceil)
+// Math.stuff: Js methods from Math(.max, .min, .random, .floor, .ceil) ----------------------- Math.stuff
 
 console.log(Math.max(1, 6, 93, 826, 1747)); // picks max
 console.log(Math.min(1, 6, 93, 826, 1747)); // picks min
@@ -62,24 +64,26 @@ console.log(Math.ceil(float));
 console.log(Math.random()); //creates number between 0 and 1
 console.log(Math.floor(Math.random() * 6) + 1); // imagine a Dice
 
+// ------------------------------------------------------------------------------------------------- grab
 // grap random character from string
 let grab = "Grab a random character from this string.";
 let randomGrab = Math.floor(Math.random() * grab.length); // creates random number within string "grab"
 console.log(grab[randomGrab]); // grabs character from string "grab" with random generated position (number) with "randomGrab"
 
-// JS methods for str (.trim, .length, .includes, .split, .toUpperCase, .toLowerCase)
+// JS methods for str (.trim, .length, .includes, .split, .toUpperCase, .toLowerCase) ---------- str-stuff
 let cat = " Catha   ";
 console.log(cat.length); // .length >> gives you "human" count answer incl. empty spaces
 console.log(cat.trim()); // .trim >> removes empty spaces before and after stuff in string NOT between words
 console.log(cat.trim().length); // first trim than count >> combined methods
 console.log(cat.toLocaleUpperCase()); // all to upper cases
 
-//.includes
+// --------------------------------------------------------------------------------------------- .includes
 console.log(cat.includes("C")); // true >> "C" is included in string
 
-//.split
+// ------------------------------------------------------------------------------------------------ .split
 console.log(cat.split(" "));
 
+// ---------------------------------------------------------------------------------------------------- if
 // if >> condition statement
 
 if (1 == 22) {
@@ -89,7 +93,7 @@ if (1 == 22) {
 }
 console.log("totally ignoring the 'else' part"); // works without "else"
 
-// function
+// ---------------------------------------------------------------------------------------------- function
 //           arguments (num1, num2)
 function fun(num1, num2) {
   // old skool way to declare a function
@@ -103,15 +107,15 @@ console.log(fun(3, 9)); //btw NaN means "Not a Number"
 // we need: [] {} () <> ; : , . - _ / \ ! ? @ % $
 console.log(`:sob:`); // smilies don't work
 
-//Es6 function
+// ------------------------------------------------------------------------------------------ Es6 function
 //never declare a function with let or var ALWAYS use const (can't be changed, can't get lost)
 const functionName = () => {
   //new way to write a function
   return `an As6 function`;
 };
 console.log(functionName());
-
-//array >> alway [!]
+// ------------------------------------------------------------------------------------------------- array
+//array >> !! alway [] !!
 //              0        1          2
 const arr = ["Catha", "Matthias", "Konstantin"];
 console.log(arr[2]);
@@ -123,7 +127,7 @@ console.log(arr[arrNum]);
 const NumArray = [19, 84, 20, 16, 39, 932, 198, 2, 23, 8373, 71];
 console.log(NumArray[NumArray.length - 1]);
 
-// for loop
+// ---------------------------------------------------------------------------------------------- for-loop
 
 for (let i = 0; i <= 5; i++) {
   //declare i (let i = 0) just in this loop
@@ -224,7 +228,7 @@ for (let i = 0; i < img.length; i++) {
 }
 
 // console.log ("check: ", check) (check1 + check2) >> keep code clean!
-
+// ------------------------------------------------------------------------------------------- switch case
 // user input SWITCH CASE
 // use switch case if there is a wide range of possible "IF"s
 console.log(
@@ -282,10 +286,10 @@ switch (howManyKids) {
 
 // more STUFF
 
-const nam = ["Lieschen", "Resi", "Matthias", "Konstantin"];
+const namen = ["Lieschen", "Resi", "Matthias", "Konstantin"];
 const sym = ["§", "%", "&", "/"];
-console.log(nam.length); // to get number of elements in an array (human counting)
-console.log(nam[nam.length - 1]); // to access the last item
+console.log(namen.length); // to get number of elements in an array (human counting)
+console.log(namen[namen.length - 1]); // to access the last item
 
 let cityName = [];
 console.log(cityName.length);
@@ -298,30 +302,30 @@ ciNa[0] = "Salzburg";
 ciNa[1] = "Graz";
 ciNa[2] = "Innsbruck";
 console.log(ciNa);
-ciNa.push("Wien"); // adds item after last item ----------------------------- .push
+ciNa.push("Wien"); // adds item after last item ---------------------------------------------------- .push
 console.log(ciNa);
 
-ciNa.pop(); //removes last item --------------------------------------------- .pop
+ciNa.pop(); //removes last item --------------------------------------------------------------------- .pop
 console.log(ciNa);
 let removedItem = ciNa.pop(); //store removed items in new variable
 console.log(ciNa);
 console.log(removedItem);
 
-ciNa.unshift("Bregenz"); //adds an item to first position ------------------- .unshift
+ciNa.unshift("Bregenz"); //adds an item to first position --------------------------------------- .unshift
 console.log(ciNa);
-ciNa.shift(); //removes first item ------------------------------------------ .shift
+ciNa.shift(); //removes first item ---------------------------------------------------------------- .shift
 console.log(ciNa);
 let remIT = ciNa.shift();
 console.log(ciNa);
 console.log(remIT);
 
 //const nam = ["Lieschen", "Resi", "Matthias", "Konstantin"];
-console.log(nam.indexOf("Resi")); // counts js style ------------------------ .indexOf
+console.log(nam.indexOf("Resi")); // counts js style -------------------------------------------- .indexOf
 
 let pos = nam.indexOf("Matthias"); // number – which position will be removed
 console.log(pos);
 let n = 2; //how many items will be removed
-let removed = nam.splice(pos, n); // ---------------------------------------- .splice
+let removed = nam.splice(pos, n); // ------------------------------------------------------------- .splice
 console.log(removed);
 console.log(nam);
 
@@ -339,13 +343,13 @@ for (let i = 0; i < nam.length; i++) {
   console.log(nam[i]);
 }
 //.split > splits strings into arrays
-let str = "hej there, it's me – did you miss me?";
-let newArr = str.split(" "); //needs a criteria (case sensitive) ----------- .split
-let newArrLen = str.split(" ").length;
+let stri = "hej there, it's me – did you miss me?";
+let newArr = stri.split(" "); //needs a criteria (case sensitive) --------------------------------- .split
+let newArrLen = stri.split(" ").length;
 console.log(newArrLen);
 console.log(newArr);
 //.join > joins arrays to strings together
-let newStr = newArr.join(" "); // needs criteria as well ------------------- .join
+let newStr = newArr.join(" "); // needs criteria as well ------------------------------------------- .join
 console.log(newStr);
 
 //.concat > merges two (or more) arrays
@@ -353,7 +357,7 @@ console.log(newStr);
 let arr1 = [1, 34, 578];
 let arr2 = [84, 91, 747];
 
-let arr3 = arr1.concat(arr2); //-------------------------------------------- .concat
+let arr3 = arr1.concat(arr2); //------------------------------------------------------------------ .concat
 console.log(arr3);
 
 arr3 = arr1.concat(arr2, [666, 667, 668]);
@@ -363,7 +367,7 @@ console.log(arr3);
 let fakeCopy = nam; // called reference  – if you push eg it also changes original (nam)
 console.log(fakeCopy); // alt+ d >> highlights all similar words
 
-let shallowCopy = nam.slice(); //------------------------------------------- .slice
+let shallowCopy = nam.slice(); //------------------------------------------------------------------ .slice
 console.log(shallowCopy);
 shallowCopy.push("Horst"); // only adds in shallow copy not in the original
 console.log(shallowCopy);
@@ -372,16 +376,16 @@ console.log(nam);
 // ways to initialize arrays
 
 // best way (so far) --------------------------------------------------------------
-const arr1 = [];
+const arr11 = [];
 arr1.push("cat");
-console.log(arr1);
-const arr2 = ["dog", "mouse"];
+console.log(arr11);
+const arr22 = ["dog", "mouse"];
 
-//new array with the NEW-method -------------------------------------------------  new
+//new array with the NEW-method ---------------------------------------------------------------------  new
 
-const arr3 = new Array(); // Capital A (Object) > initialize empty NEW array
+const arr33 = new Array(); // Capital A (Object) > initialize empty NEW array
 
-console.log(arr3);
+console.log(arr33);
 
 // const str1 = new String();
 // console.log(str1);
@@ -389,7 +393,7 @@ console.log(arr3);
 // const num1 = new Number();
 // console.log(num1);
 
-//making a new array -------------------------------------------------------------- .of
+//making a new array --------------------------------------------------------------------------------- .of
 const arr4 = Array.of(1, 3, 8, 48, 92);
 console.log(arr4);
 
@@ -405,8 +409,8 @@ console.log(revArrRev);
 console.log(typeof revArrRev); //answer: object
 
 // tells me true or false if it is an array --------------------------------------- .isArray()
-let bool = Array.isArray(revArr);
-console.log(bool);
+let boolie = Array.isArray(revArr);
+console.log(boolie);
 
 //will start searching backwards (-1 means nothing found) ------------------------- .lastIndexOf()
 const arr5 = ["you", "go", "home", "you", "loser"]; // will never show the first "you"
@@ -447,10 +451,10 @@ while (loopOne < 5) {
 
 //more conditions possible with do-loop (than for-loop)
 
-// ========================================================= -1 means ALWAYS nothing found
-// ================================================= NO returns in loops (return belong in functions)
+// =========================== -1 means ALWAYS nothing found =============================================
+// ================== NO returns in loops (return belong in functions)====================================
 
-// _______________________________________________________________________new way to function
+// ____________________________________________________________________________________new way to function
 
 //old school function
 function display(str) {
@@ -495,11 +499,11 @@ function halloUser2() {
   return `hej you, looking good 2day`;
 }
 
-// map is a loop and needs a function ------------------------------------------------------- .map()
+// map is a loop and needs a function ------------------------------------------------------------- .map()
 // old way : for (let i = 0; i<= arr.length;i++) replacement is .map
 const names = ["Konstantin", "Lieschen", "Matthias", "Resi"];
 //           ArrayName
-const newArr = names.map((name, indexnumer) => {
+const newArrr = names.map((name, indexnumer) => {
   if (name == "Matthias") {
     console.log("don't like you anymore");
   }
@@ -513,7 +517,7 @@ const newCity = cities.map((city, i) => console.log(city));
 //.map = function inside of a method
 // .map don't need a return if only 1 thing, later on needs a return
 
-// ---------------------------------------------------------------------------------------- .reduce()
+// --------------------------------------------------------------------------------------------- .reduce()
 // collecting data
 const numArr = [1, 3, 7, 9, 23, 56];
 // accumulation = Ansammlung/Anhäufung
@@ -528,7 +532,7 @@ const reducer2 = numArr.reduce(
 );
 console.log(reducer2);
 
-// ---------------------------------------------------------------------------------------------- break;
+// ------------------------------------------------------------------------------------------------ break;
 //breaking out of a loop:
 
 /*
