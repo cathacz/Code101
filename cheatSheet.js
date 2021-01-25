@@ -397,35 +397,35 @@ console.log(arr33);
 const arr4 = Array.of(1, 3, 8, 48, 92);
 console.log(arr4);
 
-// sorting items in an array (by using UTF-16 code)-------------------------------- .sort
+// sorting items in an array (by using UTF-16 code)------------------------------------------------- .sort
 let alpha = ["c", "r", "w", "m", "C", 8, "%"];
 let sortAlpha = alpha.sort();
 console.log(sortAlpha); // order: special char., numbers, capitals, smalls
 
-// to reverse an array > first is last and last is first -------------------------- .reverse
+// to reverse an array > first is last and last is first ---------------------------------------- .reverse
 let revArr = [2, 3, 88, 9, 7]; //> [7, 9, 88, 3, 2]
 let revArrRev = revArr.reverse();
 console.log(revArrRev);
 console.log(typeof revArrRev); //answer: object
 
-// tells me true or false if it is an array --------------------------------------- .isArray()
+// tells me true or false if it is an array --------------------------------------------------- .isArray()
 let boolie = Array.isArray(revArr);
 console.log(boolie);
 
-//will start searching backwards (-1 means nothing found) ------------------------- .lastIndexOf()
+//will start searching backwards (-1 means nothing found) --------------------------------- .lastIndexOf()
 const arr5 = ["you", "go", "home", "you", "loser"]; // will never show the first "you"
 console.log(arr5.lastIndexOf("you"));
 console.log(arr5.indexOf("you"));
 //.indexOf would gives you the first "you"
 
-// adds item(s) to array ----------------------------------------------------------- .fill()
+// adds item(s) to array ------------------------------------------------------------------------- .fill()
 let arr6 = [22, 55, 7, 78, 99, 125, 2456];
 let newArr6 = arr6.fill(101, 1, 3); // (what, from, to) replaces existing items
 // fill(what, from)>> replaces from position "from" all remaining items
 console.log(newArr6);
 
 // do & while are kind of a loop >> but dizygotic twins
-// -------------------------------------------------------------------------------------- do
+// ---------------------------------------------------------------------------------------------------- do
 // with do – we do it at least one time!
 
 let counter = 0; //v declare counter outside loop
@@ -440,7 +440,7 @@ do {
   //   } while (count <= 2);
 } while (counter <= 10); // stops when condition reached
 
-// -------------------------------------------------------------------------------------- while
+// ------------------------------------------------------------------------------------------------- while
 // if condition not full-filled while ignores loops – you get nothing
 
 let loopOne = 0;
