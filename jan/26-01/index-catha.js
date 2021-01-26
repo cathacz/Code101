@@ -64,10 +64,48 @@ printingMyName();
 })("Catha", 3, 4);
 
 // -------------------------------------------------------------------------------------------------- .map
+// converting an array to a different array: Array.prototype.map(<function>)
+// want same array but modified
 
-// ------------------------------------------------------------------------Array.prototype.map(<function>)
+const book = ["Bio of a man", "This sucks", "The secret"];
+//                  currentValue, indexNumber
+const printBook = book.map((item, index) => `${index}. titel: ${item}`); //function in .map > nameless fct
+console.log(book); // book stays the same
+console.log(printBook);
 
-// ===== assignment stuff ======
+const nummern = ["1", "2", "3"].map((item) => parseInt(item));
+console.log(nummern);
+
+const printMany = [1, 2, 3, 4, 5].map((item) =>
+  console.log(item, "Catha fetzt")
+);
+
+// ----------------------------------------------------------------------------------------------- .reduce
+// getting a in single output value
+
+//          accumulator , currentValue (= item)
+const reducer = (acc, cur) => acc + cur;
+const resultArr = [2, 3, 1, 3].reduce(reducer); // > = 9
+console.log(resultArr);
+
+// ----------------------------------------------------------------------------------------------- .filter
+// getting an array with items that aline with your condition: Array.prototype.filter(<function>)
+// filter always with array!
+
+const naems = ["Matthias", "Hans-Jörg", "Konstantin", "Catharina"];
+const filArr = naems.filter((naem) => naem.length == 9);
+console.log(filArr); // Hans-Jörg, Catharina
+
+// ------------------------------------------------------------------------------------------------- .find
+// getting a the first item that aline with your condition: Array.prototype.find(<function>)
+// find always comes back with single value
+
+const nUm = [1, 2, 34, 5, 6, 7];
+const biggerThan5 = nUm.find((nombre) => nombre > 5);
+console.log(biggerThan5); // > 34 – cuz it's the first true item, doesn't bother the others
+
+console.log("===== morning assignment stuff ======");
+console.log("                                     ");
 
 console.log("===== Ass1 =====");
 // Write a function that it returns  “Two for me and one for you” when no arguments are passed
@@ -115,6 +153,16 @@ console.log(sum(1)); // ---> 1
 console.log(sum(1, 15)); // ---> 16
 console.log(sum(25, 25, 20)); // ---> 70
 
+// WWHD – one line functions are the best
+const sum2 = (...args) => {
+  //                            { return acc +cur} >>> return alway once in ONE function
+  return args.reduce((acc, cur) => acc + cur);
+};
+
+console.log(sum2(1)); // ---> 1
+console.log(sum2(1, 15)); // ---> 16
+console.log(sum2(25, 25, 20)); // ---> 70
+
 console.log("===== Ass5 =====");
 // Bonus: Write a function which accepts any amount of numbers and returns the average.
 
@@ -131,3 +179,69 @@ console.log(average(0)); // ---> 0
 console.log(average(1, 2)); // ---> 1.5
 console.log(average(1, 3, 6, 10)); // ---> 5
 console.log(average(12, 14, 16)); // ---> 14
+
+console.log("===== toCamelCase =====");
+const toCamelCase = (str) => {
+  let strToArr = str.split("_");
+  let result = strToArr.map((item, i) =>
+    1 > i ? item : item[0].toUpperCase() + item.slice(1)
+  );
+  return result.join("");
+};
+console.log(toCamelCase("some_stuff_here"));
+
+console.log("===== afternoon assignment stuff ======");
+console.log("                                       ");
+console.log("===== hackerSpeak =====");
+// hackerSpeak
+const hackerSpeak = (str) => {
+  // WWHD
+  return str
+    .split("")
+    .map((chr) => {
+      switch (chr) {
+        case "a":
+          return "4";
+        case "e":
+          return "3";
+        case "i":
+          return "1";
+        case "o":
+          return "0";
+        case "s":
+          return "5";
+        default:
+          return chr;
+      }
+    })
+    .join("");
+};
+
+console.log(hackerSpeak("This is NO fun at all!"));
+console.log("===== Odds & Even =====");
+// Create a program that changes a given array by adding 1 to each odd integer and subtracting 1 from each even integer.
+// const oddEven = (arr) => {
+//   let result = arr.map((item, i) => (i % 2 == 0 ? item - 1 : item + 1));
+//   return result;
+// };
+//Examples:
+// console.log(oddEven(3, 5, 2, 4)); // ➞ expected output: [4, 6, 1, 3]
+// console.log(oddEven(6, 9, 10, 20)); // ➞ expected output: [5, 10, 9, 19]
+
+const oddEven2 = (...args) => {
+  return args.map((item) => (item % 2 == 0 ? ++item : --item));
+};
+console.log(oddEven2([3, 5, 2, 4])); // ➞ expected output: [4, 6, 1, 3]
+console.log(oddEven2([6, 9, 10, 20])); // ➞ expected output: [5, 10, 9, 19]
+
+console.log("===== howManyStr =====");
+// how many chr in a str(not case sens)
+
+const howManyStr = (str, char) => {
+  return str
+    .toLowerCase()
+    .split("")
+    .filter((item) => item == char).length;
+};
+console.log(howManyStr("I like pizza", "p")); // -> 1
+console.log(howManyStr("I like pizza", "i")); // -> 3
