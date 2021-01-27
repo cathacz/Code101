@@ -570,3 +570,109 @@ for (let i = 1; i <= 10; i++) {
     console.log(i);
   }
 }
+
+//parameters: Naming and order
+
+const userPrint = (name, add, age) => {
+  console.log(
+    `Hej ${name}, is your address in ${add} and are you ${age} years old?`
+  );
+};
+userPrint("Matthias", "Leipzig", 48);
+
+// ----------------------------------------------------------------------------------------- default value
+
+const hejUser = (userName = "I ask for your stupig name!") => {
+  console.log(`Hej ${userName}`);
+};
+hejUser("Matthias");
+hejUser();
+
+// ------------------------------------------------------------------------------------- spread syntax ...
+// shallow copy of an array
+
+const arr = ["Hej", "I", "you"];
+const cloneArr = [...arr];
+
+cloneArr[0] = "hello";
+console.log(arr);
+console.log(cloneArr);
+
+const arr1 = ["add", "stuff"];
+const cloneArr1 = ["you can", ...arr1, "in front", "and back"];
+
+console.log(arr1);
+console.log(cloneArr1);
+
+// -------------------------------------.--------------------------------------------------------- ...args
+
+const summ = (x, y, z, s, u) => x + y + z + s + u; // => { return x + y};
+console.log(summ(2, 6, 7, 4, 1)); //>20
+//                                  args = arguments (can be named anything)
+const printFunThingsToDo = (usNa, ...args) => {
+  console.log(args);
+  console.log(
+    `Hej ${usNa} so you like ${args[(0, args.length - 2)]}, and ${
+      args[args.length - 1]
+    }?`
+  );
+};
+console.log(
+  printFunThingsToDo(
+    "Catha",
+    "photography",
+    "painting",
+    "DIY-Stuff",
+    "gardening"
+  )
+);
+// -------------------------------------------------------------------------------------- "cool" functions
+//                       NO {} if only one thing to execute
+const printingMyName = () => console.log("Catha");
+printingMyName();
+
+//function executes itself – needs old-skool function
+(function sayMyName(cat, x, y) {
+  console.log(`${cat}'s lucky ${x + y}`);
+})("Catha", 3, 4);
+
+// -------------------------------------------------------------------------------------------------- .map
+// converting an array to a different array: Array.prototype.map(<function>)
+// want same array but modified
+
+const book = ["Bio of a man", "This sucks", "The secret"];
+//                  currentValue, indexNumber
+const printBook = book.map((item, index) => `${index}. titel: ${item}`); //function in .map > nameless fct
+console.log(book); // book stays the same
+console.log(printBook);
+
+const nummern = ["1", "2", "3"].map((item) => parseInt(item));
+console.log(nummern);
+
+const printMany = [1, 2, 3, 4, 5].map((item) =>
+  console.log(item, "Catha fetzt")
+);
+
+// ----------------------------------------------------------------------------------------------- .reduce
+// getting a in single output value
+
+//          accumulator , currentValue (= item)
+const reducer = (acc, cur) => acc + cur;
+const resultArr = [2, 3, 1, 3].reduce(reducer); // > = 9
+console.log(resultArr);
+
+// ----------------------------------------------------------------------------------------------- .filter
+// getting an array with items that aline with your condition: Array.prototype.filter(<function>)
+// filter always with array!
+
+const naems = ["Matthias", "Hans-Jörg", "Konstantin", "Catharina"];
+const filArr = naems.filter((naem) => naem.length == 9);
+console.log(filArr); // Hans-Jörg, Catharina
+
+// ------------------------------------------------------------------------------------------------- .find
+// getting a the first item that aline with your condition: Array.prototype.find(<function>)
+// find always comes back with single value
+
+const nUm = [1, 2, 34, 5, 6, 7];
+const biggerThan5 = nUm.find((nombre) => nombre > 5);
+console.log(biggerThan5); // > 34 – cuz it's the first true item, doesn't bother the others
