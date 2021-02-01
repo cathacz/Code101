@@ -676,3 +676,101 @@ console.log(filArr); // Hans-Jörg, Catharina
 const nUm = [1, 2, 34, 5, 6, 7];
 const biggerThan5 = nUm.find((nombre) => nombre > 5);
 console.log(biggerThan5); // > 34 – cuz it's the first true item, doesn't bother the others
+
+// === let, var, const vs global ===
+
+// global { local }
+
+// function inside a function
+function main(num1, num2) {
+  // outer function
+  function second(n) {
+    return n * n;
+    // inner function
+  }
+  //    (3*3)= 9 + (4*4)= 16      = 25
+  return second(num1) + second(num2);
+  // outer function calls inner function
+}
+
+console.log(main(3, 4)); // > 25
+
+// ======================================== every function need a return!! ===============================
+
+// nested Scopes: accessing outer global variables ========================================= nested Scopes
+
+let nice = true; // global variable
+const outerFunction = (x, y) => {
+  let big = true; // local Variable
+  console.log(big + " outerFunction");
+  const innerFunction = (num) => {
+    big = false;
+    nice = false;
+    console.log(big + " innerFunction");
+    return num + 10;
+  };
+  //          (3+10) = 13 + (4+10)= 14
+  return innerFunction(x) + innerFunction(y);
+  // prints (big + "innerFunction") 2 times cuz it calls it 2 times
+
+  // cannot access in inner function declared variables from here
+};
+console.log(outerFunction(3, 4)); // > 27
+// cannot access local variable here
+
+// =============================================================================================== closure
+
+let nr = 10;
+function fum() {
+  return nr + nr;
+}
+console.log(fum());
+nr = 20;
+console.log(fum());
+
+// invoking = calling
+// functions that return other function
+
+//const secureFunction = (() => {}) >>> outer () secures the function
+const secureFunction = (() => {
+  let counter = 0;
+  return () => {
+    // anonymous function
+    counter++;
+    return counter;
+  };
+})(); // the empty () means the function invokes itself
+
+console.log(secureFunction()); // > 1
+console.log(secureFunction()); // > 2
+// === SIAF = self-invoking anonymous function ====================================================== SIAF
+// (function(){})(); oder (()=>{});
+(function () {
+  console.log("Catha fetzt");
+})();
+
+// === IIFE = immediately-invoked function Expression =============================================== IIFE
+
+const summmmm = ((x, y) => {
+  return x + y;
+})(3, 4);
+console.log(summmmm); // > 7
+
+// write a function plus that uses a closure that performs addition on arguments in 2 separate function calls.
+const plus = (a) => {
+  return (b) => {
+    return a + b;
+  };
+};
+
+// execute outer function(5) and then outer function(4)
+// outer function call can be empty (if it is in function) but inner function must be called
+console.log(plus(5)(4)); // > 9
+
+// write a function multi that uses a closure that performs multiplication. However, the outer function should be stored in a variable which is then called.
+
+function multi(num) {
+  return (x) => x * num;
+}
+const times = multi(2)(5);
+console.log(times);
