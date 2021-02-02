@@ -121,20 +121,6 @@ function retirementSavings(age, retireAge, salary, percentage) {
 console.log(retirementSavings(40, 65, 2000, 5));
 console.log(retirementSavings(67, 65, 2000, 5));
 
-(function (age, retireAge, salary, percentage) {
-  return (result) => {
-    let yearsLeft = retireAge - age;
-    let yearlySaving = (salary * percentage) / 100;
-    //console.log(yearlySaving);
-    //console.log(yearsLeft);
-    if (yearsLeft <= 0) {
-      return `You’re already retired!`;
-    } else {
-      return `your savings will be ${yearsLeft * yearlySaving}`;
-    }
-  };
-})((67, 65, 2000, 5));
-
 ((age, retireAge, salary, percentage) => {
   if (age >= retireAge) {
     console.log(`You’re already retired!`);
@@ -146,3 +132,47 @@ console.log(retirementSavings(67, 65, 2000, 5));
     console.log(`you will save ${totalSave}`);
   }
 })(40, 65, 2000, 5);
+
+// if ... else Conditions
+let fat = true;
+if (fat) {
+  console.log(`Stop eating`);
+}
+// ternary Operator
+fat ? console.log(`no I ike food`) : console.log(`I need less food`);
+
+// nested ifs  – rethink 3rd if!
+
+// takes empty strings from the beginning and end ================================================= trim()
+let ftr = "    Catha fetzt!        ";
+console.log(ftr.trim());
+// ============================================================================================= trimEnd()
+console.log(ftr.trimEnd());
+// =========================================================================================== trimStart()
+console.log(ftr.trimStart());
+
+// ========================================================================================== startsWith()
+let txt = `This start with "this"!`;
+
+console.log(txt.startsWith("Hej"));
+console.log(txt.startsWith("This")); //case-sensitive
+// ============================================================================================ endsWith()
+console.log(txt.endsWith("Hej"));
+console.log(txt.endsWith("!"));
+
+// ============================================================================================== charAt()
+let che = "hello World";
+console.log(che.charAt(6)); // same as: (but only ONE character)
+console.log(che[6]);
+
+const awr = ["Catha", "Resi"];
+console.log(awr[1][3]); // > i
+console.log(awr[0].slice(1, 4)); // same as:
+console.log(awr[0][1] + awr[0][2] + awr[0][3]); // > ath
+// ========================================================================================== charCodeAt()
+// Will return integer between 0 and 65535 that replaces UTF-16 code
+// common character codes UTF-16, UTF-8, ASCII and A 00001111
+// UTF-16 got it all (chinese, japanese, russian etc characters)
+// ASCII = American Standard Code for Information Interchange
+let a = "°";
+console.log(a.charCodeAt(0)); // - 96 to translate to latin alphabeth
