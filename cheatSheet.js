@@ -774,3 +774,47 @@ function multi(num) {
 }
 const times = multi(2)(5);
 console.log(times);
+
+// if ... else Conditions
+let fat = true;
+if (fat) {
+  console.log(`Stop eating`);
+}
+// ternary Operator
+fat ? console.log(`no I ike food`) : console.log(`I need less food`);
+
+// nested ifs  – rethink 3rd if!
+
+// takes empty strings from the beginning and end ================================================= trim()
+let ftr = "    Catha fetzt!        ";
+console.log(ftr.trim());
+// ============================================================================================= trimEnd()
+console.log(ftr.trimEnd());
+// =========================================================================================== trimStart()
+console.log(ftr.trimStart());
+
+// ========================================================================================== startsWith()
+let txt = `This start with "this"!`;
+
+console.log(txt.startsWith("Hej"));
+console.log(txt.startsWith("This")); //case-sensitive
+// ============================================================================================ endsWith()
+console.log(txt.endsWith("Hej"));
+console.log(txt.endsWith("!"));
+
+// ============================================================================================== charAt()
+let che = "hello World";
+console.log(che.charAt(6)); // same as: (but only ONE character)
+console.log(che[6]);
+
+const awr = ["Catha", "Resi"];
+console.log(awr[1][3]); // > i
+console.log(awr[0].slice(1, 4)); // same as:
+console.log(awr[0][1] + awr[0][2] + awr[0][3]); // > ath
+// ========================================================================================== charCodeAt()
+// Will return integer between 0 and 65535 that replaces UTF-16 code
+// common character codes UTF-16, UTF-8, ASCII and A 00001111
+// UTF-16 got it all (chinese, japanese, russian etc characters)
+// ASCII = American Standard Code for Information Interchange
+let a = "a";
+console.log(a.charCodeAt(0)); // - 96 to translate to latin alphabeth

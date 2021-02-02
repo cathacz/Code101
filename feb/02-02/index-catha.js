@@ -20,9 +20,9 @@ const userObj = {
   name: "Konstantin",
   lastName: "Fischte",
   age: 33,
-  address: "xxx str",
+  add: "xxx str",
   act: ["gardening", "sleep", "read"],
-  fat: true,
+  fat: false,
 };
 console.log(userObj.name); // > accessing Konstantin
 console.log(typeof userObj); // > object
@@ -43,7 +43,20 @@ console.log(typeof obj2);
 // fill up/ add to object
 obj2.name = "Hans-Jörg"; // common way
 obj2["age"] = 54;
-console.log(obj2);
-// overwrite values
+console.log(obj2); // {name: "Hans-Jörg", age: 54}
+// overwrite values (keys can't be renamed when value assigned)
 obj2.age = 58;
 console.log(obj2);
+
+// declare stuff – fill up later
+const save = new Object();
+console.log(save); // > {}
+const arr = new Array();
+console.log(arr); // > []
+
+// ============================================================================================ "cool" for
+// loopü
+// props = variable (aka properties)
+for (let props in userObj) {
+  console.log(`${props}: ${userObj[props]}`);
+}
