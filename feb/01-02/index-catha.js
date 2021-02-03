@@ -174,5 +174,5 @@ console.log(awr[0][1] + awr[0][2] + awr[0][3]); // > ath
 // common character codes UTF-16, UTF-8, ASCII and A 00001111
 // UTF-16 got it all (chinese, japanese, russian etc characters)
 // ASCII = American Standard Code for Information Interchange
-let a = "°";
+let a = "a";
 console.log(a.charCodeAt(0)); // - 96 to translate to latin alphabeth

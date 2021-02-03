@@ -818,3 +818,5 @@ console.log(awr[0][1] + awr[0][2] + awr[0][3]); // > ath
 // ASCII = American Standard Code for Information Interchange
 let a = "a";
 console.log(a.charCodeAt(0)); // - 96 to translate to latin alphabeth
+
+console.log("===== OBJECTS =====");
