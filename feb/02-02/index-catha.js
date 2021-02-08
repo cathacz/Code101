@@ -55,7 +55,7 @@ const arr = new Array();
 console.log(arr); // > []
 
 // ======================================================================================= "cool" for-loop
-
+// inside the for-loop use [ ] notation! (. notation won't work)
 // props = variable (aka properties = key incl. value)
 for (let props in userObj) {
   console.log(`${props}: ${userObj[props]}`);
@@ -189,7 +189,7 @@ function getKeysAndValues(obj) {
 
 console.log(getKeysAndValues(objectToArray));
 
-// ------------------------------------------------------------------------------------------------ delete
+// ---------------------------------------------------------------------------------------------- delete
 
 delete objectToArray.cats;
 console.log(objectToArray);
@@ -205,3 +205,23 @@ function checkObj(obj, checkProp) {
   // Only change code above this line
 }
 console.log(checkObj({ gift: "pony", pet: "kitten", bed: "sleigh" }, "gift")); // should return "pony"
+
+const objUserInfo = {
+  userName: "Catha",
+  age: 33,
+};
+
+console.log(objUserInfo.hasOwnProperty("add"));
+console.log(objUserInfo.hasOwnProperty("age"));
+
+// ======================================================================================== Object.seal()
+
+Object.seal(objUserInfo);
+objUserInfo.name = "Katja"; // didn't change name in Object
+objUserInfo.add = "Leipzig"; // didn't add the address to Object // ============ there is a "freeze" too
+delete objUserInfo.age; // didn't delete the age from the Object
+console.log(objUserInfo);
+
+// ================================================================ LOOPS ... Objects
+// for in
+// for of
