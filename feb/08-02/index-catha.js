@@ -132,8 +132,51 @@ const objArr = [
   { name: "Matthias", age: 48, gender: "male" },
 ];
 
-for (let(key, value) of objArr) {
-  console.log("hej " + key.value);
+const favBooks = [
+  { title: "Little Mermaid" },
+  { title: "Snowwhite" },
+  { title: "Der kleine Besserwisser" },
+];
+for (let prop in favBooks) {
+  console.log("hej " + prop);
+}
+
+for (let prop of objArr) {
+  console.log("hej " + prop.name);
 }
 const [name] = objArr;
 console.log(name);
+
+// ======================================== conditions ===================================================
+
+// == comparing value between 2 items
+// === comparing value and type
+// != not equal
+// <= smaller and/or equal
+
+let condition1 = 1 < 23; // true
+console.log(condition1);
+let condition2 = 1 == 23; // false
+console.log(condition2);
+let condition3 = 1 <= 23; // true
+console.log(condition3);
+if (condition1 && condition3) {
+  console.log("super true");
+} else {
+  console.log("not true");
+}
+
+// true && true = true
+// true && false = false
+// false && false = false
+
+// true || true = true
+// true || false = true
+// false || false = false
+
+// loop
+
+const a = [76, 02, 63];
+for (let i = 0; i <= 5; i++) {
+  console.log("*".repeat(i));
+}
