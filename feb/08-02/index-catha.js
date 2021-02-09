@@ -180,3 +180,12 @@ const a = [76, 02, 63];
 for (let i = 0; i <= 5; i++) {
   console.log("*".repeat(i));
 }
+
+let box; // box is ready
+for (let i = 0; i <= 5; i++) {
+  box = ""; // box is empty now
+  for (let j = 0; j < i; j++) {
+    box += "+"; // box=
+  }
+  console.log(box);
+}
