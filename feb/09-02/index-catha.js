@@ -192,8 +192,11 @@ let student = {
   class: "4A",
   course: "English",
 };
+const propArray = function (obj) {
+  return Object.keys(obj);
+};
 
-console.log(Object.keys(student)); //>>["name", "class", "course"]
+console.log(propArray(student)); //>>["name", "class", "course"]
 
 // ===== ASS 3 =====
 // Merge. Create a function that takes two objects as its parameters and merges them together into a new object.
