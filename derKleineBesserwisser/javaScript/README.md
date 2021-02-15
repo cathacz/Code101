@@ -65,7 +65,7 @@ do & while
 
 ## arrays
 
-push
+push \n
 pop
 unshift
 shift
