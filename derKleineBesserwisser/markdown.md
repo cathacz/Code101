@@ -38,8 +38,11 @@ H2 :leftwards_arrow_with_hook: ---
 ## Styles
 
 ` _ text _` > _italic_
+
 ` ** text **` > **bold**
+
 ` **_ text _**` > **_bold + italic_**
+
 `~~text~~` > ~~strikethrough~~
 
 ---
@@ -49,7 +52,9 @@ H2 :leftwards_arrow_with_hook: ---
 ### unsorted list:
 
 `* text` :leftwards_arrow_with_hook:
+
 `* text` :leftwards_arrow_with_hook:
+
 `* text ` :leftwards_arrow_with_hook:
 
 - text
@@ -59,7 +64,9 @@ H2 :leftwards_arrow_with_hook: ---
 ### sorted list:
 
 `1. text` :leftwards_arrow_with_hook:
+
 `2. text` :leftwards_arrow_with_hook:
+
 `3. text` :leftwards_arrow_with_hook:
 
 1. text
