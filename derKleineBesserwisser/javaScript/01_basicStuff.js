@@ -7,12 +7,12 @@ let x = 23; // can be changed later on, not hoisted
 const y = 76; // cannot be changed, stays
 // --------------------------------------------------------------------------------------------------- var
 var z = 91; // global variable (old skool) = let but var is hoisted, let not hoisted
-//hoisting --- read that
+//hoisting --- read that!
 
 // =============================================================================================== strings
 let str = "This is a string"; // a string lives in " "
 
-//bracket notions: [ ] grab letter from string; -------------------------------------------------string[ ]
+//bracket notions: [ ] grabs letter from string; ------------------------------------------------string[ ]
 console.log(str[8]); // >> a
 // starts counting at 0 and counts empty spaces as well
 

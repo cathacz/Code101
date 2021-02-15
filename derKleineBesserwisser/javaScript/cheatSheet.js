@@ -65,7 +65,7 @@ console.log(Math.random()); //creates number between 0 and 1
 console.log(Math.floor(Math.random() * 6) + 1); // imagine a Dice
 
 // ------------------------------------------------------------------------------------------------- grab
-// grap random character from string
+// grab random character from string
 let grab = "Grab a random character from this string.";
 let randomGrab = Math.floor(Math.random() * grab.length); // creates random number within string "grab"
 console.log(grab[randomGrab]); // grabs character from string "grab" with random generated position (number) with "randomGrab"
@@ -102,10 +102,10 @@ function fun(num1, num2) {
 } //            parameters ( 3, 9)
 console.log(fun(3, 9)); //btw NaN means "Not a Number"
 
-//synchronis running line by line
+//synchronous request is running line by line
 
 // we need: [] {} () <> ; : , . - _ / \ ! ? @ % $
-console.log(`:sob:`); // smilies don't work
+console.log(`😋`); // smilies don't work
 
 // ------------------------------------------------------------------------------------------ Es6 function
 //never declare a function with let or var ALWAYS use const (can't be changed, can't get lost)
@@ -205,7 +205,7 @@ for (let i = 0; i <= 5; i++) {
   console.log(draw);
 }
 
-//"return" (is for functions) in looops is a way to exit – better use >break<
+//"return" (is for functions) in loops is a way to exit – better use >break<
 
 //something else...  I guess Arrays
 
@@ -284,7 +284,7 @@ switch (howManyKids) {
     console.log("your uterus broke or you are insane");
 }
 
-// more STUFF
+// more array STUFF
 
 const namen = ["Lieschen", "Resi", "Matthias", "Konstantin"];
 const sym = ["§", "%", "&", "/"];
@@ -488,9 +488,9 @@ const halloUser = () => {
 };
 //with calling the logIn function all function that live within needs to be executed before origin function (logIn) can finish >> inner function needs to finish so outer function can finish
 logIn();
-//asynchronous thingie (java is synchronous) cause jumping around
+// asynchronous thingie (java is synchronous) cause jumping around
 
-//declare this way cause the logIn Call is before function
+// declare this way cause the logIn Call is before function
 function logIn2() {
   halloUser();
 }
@@ -499,7 +499,8 @@ function halloUser2() {
   return `hej you, looking good 2day`;
 }
 
-// map is a loop and needs a function ------------------------------------------------------------- .map()
+// ================================================================================================ .map()
+// map is a loop and needs a function
 // old way : for (let i = 0; i<= arr.length;i++) replacement is .map
 const names = ["Konstantin", "Lieschen", "Matthias", "Resi"];
 //           ArrayName
@@ -517,7 +518,7 @@ const newCity = cities.map((city, i) => console.log(city));
 //.map = function inside of a method
 // .map don't need a return if only 1 thing, later on needs a return
 
-// --------------------------------------------------------------------------------------------- .reduce()
+// ============================================================================================= .reduce()
 // collecting data
 const numArr = [1, 3, 7, 9, 23, 56];
 // accumulation = Ansammlung/Anhäufung
@@ -532,7 +533,7 @@ const reducer2 = numArr.reduce(
 );
 console.log(reducer2);
 
-// ------------------------------------------------------------------------------------------------ break;
+// ================================================================================================ break;
 //breaking out of a loop:
 
 /*
@@ -561,7 +562,7 @@ for (let i = 1; i <= 10; i++) {
   }
 }
 
-// ..............................................................................................continue;
+// ============================================================================================= continue;
 //skipping an interaction
 for (let i = 1; i <= 10; i++) {
   if (i == 4) {
@@ -661,7 +662,7 @@ const reducer = (acc, cur) => acc + cur;
 const resultArr = [2, 3, 1, 3].reduce(reducer); // > = 9
 console.log(resultArr);
 
-// ----------------------------------------------------------------------------------------------- .filter
+// ============================================================================================= .filter()
 // getting an array with items that aline with your condition: Array.prototype.filter(<function>)
 // filter always with array!
 
@@ -669,7 +670,7 @@ const naems = ["Matthias", "Hans-Jörg", "Konstantin", "Catharina"];
 const filArr = naems.filter((naem) => naem.length == 9);
 console.log(filArr); // Hans-Jörg, Catharina
 
-// ------------------------------------------------------------------------------------------------- .find
+// =============================================================================================== .find()
 // getting a the first item that aline with your condition: Array.prototype.find(<function>)
 // find always comes back with single value
 

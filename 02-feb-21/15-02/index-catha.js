@@ -34,9 +34,21 @@ console.log(catha.printData());
 // UTC Coordinated Universal Time
 // GMT Greenwich Mean Time
 
-let time = new Date().getHours(); // Date = Object from JavaScript
+let time = new Date(); // Date = Object from JavaScript
 // .getFullYear() .getMonth() .getDay() etc to specify
 console.log(time);
 // alway write fullYear
 
 // extended class ft time >>> https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/extends
+
+console.log("===== assignment =====");
+// Binary converter, convert any given number to binary.
+// Bounce : your code should be using one line only
+// Example :
+
+const bin = function (num) {
+  return parseInt(num.toString(2));
+};
+console.log(bin(20)); // > 10100
+console.log(bin(10)); // > 1010
+console.log(bin(44)); // > 101100

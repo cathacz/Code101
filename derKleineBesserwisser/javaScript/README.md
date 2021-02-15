@@ -18,6 +18,10 @@ console(OBJECT).log(METHOD)(something(DEPENDS))
 **>** bigger
 **<** smaller
 
+we need: [ ] { } ( ) < > ; : , . - \_ / \ ! ? @ % $ && ||
+
+btw **NaN** means "Not a Number"
+
 ## 01 – basic stuff
 
 [>>>](01_basicStuff.js)
@@ -40,17 +44,28 @@ Math.random() with a string
 **ternary operator**
 = bedingter Operator >> _ ? _ : \_
 
-## functions
+## 02 – functions
+
+[>>>](02_functions.js)
+
+always use **RETURN** when { }
+
+**ternary operator**
+= bedingter Operator >> _ ? _ : \_
+
+**if else**
+||(= or)
+&&(= and)
 
 ## loops
 
+for-loop
+switch case
+do & while
+
 ## arrays
 
-## Objects
-
-ddd
-
-## Classes
+## Objects && Classes
 
 ### helpful resources
 
