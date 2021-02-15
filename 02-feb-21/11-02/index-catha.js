@@ -222,12 +222,15 @@ class TV {
     this.channel = _channel;
     this.volume = _volume;
   }
-  set increaseVolume(inVo) {
-    let add = inVo.split(" ");
-    this.volume += add[0];
+  increaseVolume() {
+    if (this.volume > 100){
+        this.volume++
+    } else {console.log("Too loud");}
   }
-  decreaseVolume(deVo) {
-    return this.volume - deVo;
+  decreaseVolume() {
+   if (this.volume >){
+       this.volume--
+   }else {console.log("Mute");}
   }
   reset(channel, volume) {
     return (_channel = 1), (_volume = 10);
