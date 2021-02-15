@@ -223,14 +223,18 @@ class TV {
     this.volume = _volume;
   }
   increaseVolume() {
-    if (this.volume > 100){
-        this.volume++
-    } else {console.log("Too loud");}
+    if (this.volume > 100) {
+      this.volume++;
+    } else {
+      console.log("Too loud");
+    }
   }
   decreaseVolume() {
-   if (this.volume >){
-       this.volume--
-   }else {console.log("Mute");}
+    if (this.volume < 0) {
+      this.volume--;
+    } else {
+      console.log("Mute");
+    }
   }
   reset(channel, volume) {
     return (_channel = 1), (_volume = 10);

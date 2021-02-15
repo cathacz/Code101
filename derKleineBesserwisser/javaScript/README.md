@@ -48,7 +48,7 @@ Math.random() with a string
 
 [>>>](02_functions.js)
 
-always use **RETURN** when { }
+a function { } alway needs a **return**
 
 **ternary operator**
 = bedingter Operator >> _ ? _ : \_
@@ -57,15 +57,14 @@ always use **RETURN** when { }
 ||(= or)
 &&(= and)
 
-## loops
+**function**
 
-for-loop
-switch case
-do & while
+**ES6 Function**
 
-## arrays
+## 03 – arrays
 
-push \n
+[>>>](03_arrays.js)
+push
 pop
 unshift
 shift
@@ -83,7 +82,16 @@ isArray
 lastIndexOf
 fill
 
-## Objects && Classes
+## 04 – loops
+
+[>>>](04_loops.js)
+for-loop
+switch case
+do & while
+
+## 05 – Objects && Classes
+
+[>>>](05_Objects.js)
 
 ### helpful resources
 
