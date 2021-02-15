@@ -818,6 +818,6 @@ console.log(awr[0][1] + awr[0][2] + awr[0][3]); // > ath
 // UTF-16 got it all (chinese, japanese, russian etc characters)
 // ASCII = American Standard Code for Information Interchange
 let a = "a";
-console.log(a.charCodeAt(0)); // - 96 to translate to latin alphabeth
+console.log(a.charCodeAt(0)); // - 96 to translate to latin alphabet
 
 console.log("===== OBJECTS =====");

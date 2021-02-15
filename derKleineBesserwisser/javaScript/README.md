@@ -65,6 +65,24 @@ do & while
 
 ## arrays
 
+push
+pop
+unshift
+shift
+indexOf
+splice
+split
+join
+concat
+slice
+new
+of
+sort
+reverse
+isArray
+lastIndexOf
+fill
+
 ## Objects && Classes
 
 ### helpful resources
