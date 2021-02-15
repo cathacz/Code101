@@ -2,14 +2,14 @@
 
 ---
 
-1. Headings
-2. Styles
-3. Lists
-4. Tables
-5. Links
-6. Images
-7. Videos
-8. Blockquote
+1. [Headings](##Headings)
+2. [Styles](##Styles)
+3. [Lists](##Lists)
+4. [Tables](##Tables)
+5. [Links](##Links)
+6. [Images](##Images)
+7. [Videos](##Videos)
+8. [Blockquote](##Blockquote)
 
 ---
 
