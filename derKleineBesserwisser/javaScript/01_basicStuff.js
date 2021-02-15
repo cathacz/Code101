@@ -104,5 +104,3 @@ console.log(!q); // >> false (! makes false true & true false)
 console.log(true ? "yay" : "nay"); // >> yay
 console.log(176 > 987 ? "yay" : "nay"); // >> nay
 console.log(136 == 987 ? 1 : 0); // >> 0
-
-console.log("end here for now");
