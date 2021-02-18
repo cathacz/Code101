@@ -1,5 +1,7 @@
 # JavaScript
 
+[EDABIT](https://edabit.com/challenges) >> üben, üben, üben
+
 ## FYI
 
 console(OBJECT).log(METHOD)(something(DEPENDS))
