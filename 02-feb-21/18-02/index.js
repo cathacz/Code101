@@ -1,7 +1,6 @@
 console.log("JavaScript-test – the Solutions");
 
-// #### Object
-
+console.log("===== Object =====");
 console.log("1. Key Pair Values");
 // - Create an object called "profileData". Add four key pair values to the object: name, surname, age and city.
 
@@ -29,8 +28,7 @@ console.log("2. Object to Array");
 // ];
 // ```
 
-// #### Arrays
-
+console.log("===== Arrays =====");
 console.log("1. Data Manipulation");
 // - Create a function named "_convertArrayData_". Use array methods to manipulate the data of the array below. The first two items in the array should switch positions and the third item should be replaced by a new item. Change the data to get the result below. Print your solution to the console.
 
@@ -83,25 +81,25 @@ console.log("4. Hour Calculation");
 // - Create a function called "_calculateHours_" which calculate how many hours (total) this person worked in the week based on the data structure `hourTracking` below. **Note**: start is always morning time, end is always afternoon. Print your solution to the console.
 
 // **Working Hours**
+const hourTracking = [
+  { day: "Monday", start: 8, end: 17 },
+  { day: "Tuesday", start: 9, end: 15 },
+  { day: "Wednesday", start: 10, end: 18 },
+  { day: "Thursday", start: 7, end: 14 },
+  { day: "Friday", start: 6, end: 12 },
+];
 
-// ```javascript
-// const hourTracking = [
-//   { day: "Monday", start: 8, end: 17 },
-//   { day: "Tuesday", start: 9, end: 15 },
-//   { day: "Wednesday", start: 10, end: 18 },
-//   { day: "Thursday", start: 7, end: 14 },
-//   { day: "Friday", start: 6, end: 12 }
-// ];
-// ```
-
+function calculateHours(arr) {
+  let workedHours = arr
+    .map((item, i) => hourTracking[i].end - hourTracking[i].start)
+    .reduce((acc, cur) => acc + cur);
+  return workedHours;
+}
 // **Expected Output**
+console.log(calculateHours(hourTracking)); // > 36
 
-// ```javascript
-// 36;
-// ```
-
-// #### Classes
-console.log("Classes");
+console.log("===== Classes =====");
+console.log("1. Classes");
 // - Create a blueprint for a course at DCI - using the `class` syntax in javascript. The class should be named "Course" The class should contain who the teacher is, whether the group is learning marketing or web development and the number of students taking the course.
 // - The class should also have a method named "spaceNeeded" that checks how big a classroom should be depending on the number of students taking the course: 1 student = 2m². E.g. If a course has 10 students, then print: "_The classroom should be 20m²._". Print your solution to the console.
 // - Create a method named "details" to print all the information of the course: "This is a web development course taught by Zain. There are 21 students taking the course.\_". Print your solution to the console.
@@ -117,7 +115,7 @@ console.log("Classes");
 // `This is a web development course taught by Zain. There are 10 students taking the course.`;
 // ```
 
-// #### Problem Solving
+console.log("===== Problem Solving =====");
 console.log("1. Format your string");
 
 // - Write function named "_capitalizeFirstLetter_" that accepts a string as an argument. The function should convert the first character of each word to uppercase. **Example** _the quick brown fox_ → _The Quick Brown Fox_. Print your solution to the console.
@@ -131,7 +129,6 @@ console.log("1. Format your string");
 // #####
 console.log("2. Validation");
 // - Look at the unit tests for validating a pin. Create a function named "_validPin_" that fulfills the requirements of the tests.
-
 // **Requirements**:
 
 // - The pin code must consist of only numbers.
@@ -141,3 +138,18 @@ console.log("2. Validation");
 // - The pin code should add up to at least 5.
 
 // The function should print `true` if the pin meets all the requirements and `false` if it does not. Print your solution to the console.
+const pin = "1008";
+function validPin(str) {
+  let num = "1234567890";
+  let arr = str.split("");
+
+  for (let i = 0; i < arr.length; i++) {
+    return (
+      arr.find((element) => !num.includes(element)) == undefined &&
+      arr[3] % 2 == 0 &&
+      str.length == 4 &&
+      arr.reduce((acc, cur) => parseInt(acc) + parseInt(cur)) >= 5
+    );
+  }
+}
+console.log(validPin(pin));
