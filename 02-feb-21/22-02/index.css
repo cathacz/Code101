@@ -89,3 +89,12 @@ iframe {
   margin-right: auto;
   margin-top: 5%;
 }
+
+table {
+  background-color: black;
+  margin: 2%;
+}
+th {
+  background-color: blanchedalmond;
+  margin: 10%;
+}
