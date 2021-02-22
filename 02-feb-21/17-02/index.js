@@ -37,4 +37,4 @@ function print() {
 //const timerDisplay = setTimeout(print, 500);
 const timerDisplay = setTimeout(() => console.log("stuff"), 500);
 
-console.log("me first");
+console.log("me first"); // "stuff" will be executed after "me first" – in console.log its after "me first"

@@ -4,17 +4,24 @@ console.log("===== Object =====");
 console.log("1. Key Pair Values");
 // - Create an object called "profileData". Add four key pair values to the object: name, surname, age and city.
 
+const profileData = {
+  name: "Catha",
+  surname: "Czipf",
+  age: 33,
+  city: "Leipzig",
+};
 console.log("2. Object to Array");
 // - "convertObjectToArray" function that convert an object into a nested array of key pair values. Look the example below.
 
+const convertObjectToArray = (obj) => Object.entries(obj);
 // **Given Object**
 
 // ```javascript
-// myObj = {
-//   "1": 10,
-//   "2": 20,
-//   "3": 30
-// };
+const myObj = {
+  1: 10,
+  2: 20,
+  3: 30,
+};
 
 // ```
 
@@ -46,10 +53,15 @@ console.log("1. Data Manipulation");
 console.log("2. Create Grid (Optional)");
 // - Create a function called "createGrid", which returns a grid of a 2D array by accepting two arguments: `size` (which determines the number of nested arrays and the number of elements in each nested array) and `char` (which determines the characters in each nested array). Print your solution to the console.
 
+const createGrid = (size, char) => {
+  const newArr = new Array(size).fill(new Array(size).fill(char));
+  return newArr;
+};
+
 // **Create Grid Function Call**
 
 // ```javascript
-// createGrid(3, "*");
+console.log(createGrid(3, "*"));
 // ```
 
 // **Expected Output**
@@ -120,13 +132,18 @@ console.log("1. Format your string");
 
 // - Write function named "_capitalizeFirstLetter_" that accepts a string as an argument. The function should convert the first character of each word to uppercase. **Example** _the quick brown fox_ → _The Quick Brown Fox_. Print your solution to the console.
 
+function capitalizeFirstLetter(str) {
+  return str
+    .split(" ")
+    .map((word) => word[0].toUpperCase() + word.substring(1))
+    .join(" ");
+}
 // **Expected Output**
 
 // ```javascript
-// capitalizeFirstLetter("hey there"); → `Hey There`
+console.log(capitalizeFirstLetter("hey there")); //→ `Hey There`
 // ```
 
-// #####
 console.log("2. Validation");
 // - Look at the unit tests for validating a pin. Create a function named "_validPin_" that fulfills the requirements of the tests.
 // **Requirements**:
