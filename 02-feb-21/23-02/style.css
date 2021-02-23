@@ -3,7 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap");
 
-/* NAV */
+/* ------------------------------------------------------------------------------------------------ NAV */
 ul {
   list-style-type: none;
   margin: 0;
@@ -28,7 +28,7 @@ li a {
 li a:hover {
   background-color: #111;
 }
-p {
+p.einleitend {
   color: rgb(58, 55, 51);
   font-family: "Work Sans", sans-serif;
   font-weight: 500;
@@ -64,17 +64,24 @@ div {
 }
 div h2 {
   text-align: center;
-  font-family: "Abril Fatface";
+  font-family: "Abril Fatface", serif;
   font-weight: normal;
   color: rgb(58, 55, 51);
 }
 div p {
+  font-family: "Work Sans", sans-serif;
   margin: 10%;
   color: rgb(58, 55, 51);
   font-weight: 300;
-  font-size: 100%;
+  font-size: 120%;
   text-align: left;
 }
+img.art {
+  display: block;
+  width: 80%;
+  height: auto;
+}
+
 img {
   display: block;
   margin: 10%;
@@ -83,16 +90,10 @@ img {
   height: auto;
 }
 
-button {
-  text-align: center;
+/* ------------------------------------------------------------------------------ header -------------- */
 
-  margin: 2%;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-  color: rgb(58, 55, 51);
-}
 header {
+  position: sticky;
   background-color: rgb(58, 55, 51);
   background-image: url("https://picsum.photos/1200/400?grayscale");
   width: 100%;
@@ -109,6 +110,7 @@ header p {
   font-size: 500%;
   letter-spacing: 0.02em;
 }
+/* ------------------------------------------------------------------------------ footer -------------- */
 footer {
   background-color: rgb(58, 55, 51);
   padding: 2%;
@@ -133,18 +135,43 @@ footer a {
   font-family: "Abril Fatface";
   letter-spacing: 0.15em;
 }
-
-.button {
+/* ---------------------------------------------------------------------- button stuff -----------------*/
+button {
   font-family: "Abril Fatface";
   letter-spacing: 0.08em;
   color: whitesmoke;
   display: block;
+  text-decoration: none;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  background-color: rgb(58, 55, 51);
+
+  padding: 0.5em;
 }
-.button:hover {
-  color: whitesmoke;
-  background-color: ;
+button:hover {
+  text-decoration: none;
+}
+button.a {
+  text-decoration: none;
+  color: yellowgreen;
+  text-decoration: none;
+}
+button {
+  text-align: center;
+  text-decoration: none;
+  margin: 2%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  color: rgb(58, 55, 51);
+  padding: 0.5em;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  /* This is better for small screens, once min() is better supported */
+  /* grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr)); */
+  gap: 1rem;
+  /* This is the standardized property now, but has slightly less support */
+  /* gap: 1rem */
 }
