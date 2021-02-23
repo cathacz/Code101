@@ -52,15 +52,20 @@ h1 {
 article {
   border-color: rgb(58, 55, 51);
   border-style: solid;
-  border-width: 0, 5em;
+  border-width: 0.15em;
   margin: 2%;
   display: inline-block;
 }
 div {
-  /*border-color: black;
-    border-style: solid;
-    border-width: 1%;*/
+  /* border-color: black;
+  border-style: solid;
+  border-width: 1%; */
   display: flex;
+  margin-bottom: 1%;
+}
+.something {
+  margin-left: 2.5%;
+  margin-right: 2.5%;
 }
 div h2 {
   text-align: center;
