@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap");
+
+/* NAV */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(58, 55, 51);
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: whitesmoke;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #111;
+}
+p {
+  color: rgb(58, 55, 51);
+  font-family: "Work Sans", sans-serif;
+  font-weight: 500;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 1%;
+  font-size: 150%;
+  text-align: center;
+  line-height: 1.2em;
+}
+
+h1 {
+  padding-top: 2%;
+  font-family: "Abril Fatface";
+  text-align: center;
+  color: rgb(58, 55, 51);
+  font-weight: normal;
+  font-size: 300%;
+  letter-spacing: 0.02em;
+}
+article {
+  border-color: rgb(58, 55, 51);
+  border-style: solid;
+  border-width: 0, 5em;
+  margin: 2%;
+  display: inline-block;
+}
+div {
+  /*border-color: black;
+    border-style: solid;
+    border-width: 1%;*/
+  display: flex;
+}
+div h2 {
+  text-align: center;
+  font-family: "Abril Fatface";
+  font-weight: normal;
+  color: rgb(58, 55, 51);
+}
+div p {
+  margin: 10%;
+  color: rgb(58, 55, 51);
+  font-weight: 300;
+  font-size: 100%;
+  text-align: left;
+}
+img {
+  display: block;
+  margin: 10%;
+  object-fit: contain;
+  width: 80%;
+  height: auto;
+}
+
+button {
+  text-align: center;
+
+  margin: 2%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  color: rgb(58, 55, 51);
+}
+header {
+  background-color: rgb(58, 55, 51);
+  background-image: url("https://picsum.photos/1200/400?grayscale");
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+header p {
+  text-shadow: 0.02em 0.02em whitesmoke;
+  padding-top: 3%;
+  font-family: "Abril Fatface";
+  text-align: center;
+  color: rgb(58, 55, 51);
+  font-weight: normal;
+  font-size: 500%;
+  letter-spacing: 0.02em;
+}
+footer {
+  background-color: rgb(58, 55, 51);
+  padding: 2%;
+}
+
+footer p {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color: papayawhip;
+  font-family: "Abril Fatface";
+  letter-spacing: 0.1em;
+  font-size: 100%;
+}
+footer a {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color: papayawhip;
+  font-family: "Abril Fatface";
+  letter-spacing: 0.15em;
+}
+
+.button {
+  font-family: "Abril Fatface";
+  letter-spacing: 0.08em;
+  color: whitesmoke;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  background-color: rgb(58, 55, 51);
+}
+.button:hover {
+  color: whitesmoke;
+  background-color: ;
+}
