@@ -1,0 +1,110 @@
+/* general setup */
+* {
+  /* * means all elements */
+  box-sizing: border-box;
+  /* border-box: garantees that the child container fits into the parent container */
+  margin: 0;
+  padding: 0;
+}
+
+/* ==================== CSS SELECTORS ======================== */
+
+/* element selector */
+
+html {
+  background-color: burlywood;
+}
+
+/* #ID selector */
+
+#cool {
+  background-color: cornsilk;
+}
+
+/* .class selector */
+
+.box {
+  background-color: darkcyan;
+}
+
+/* element, element selector */
+/* element AND element  */
+span,
+table {
+  background-color: darkgreen;
+}
+
+/* element element selector */
+/* element inside element  */
+div p {
+}
+/* element > element selector */
+/* element parent element – immediate child*/
+div > p {
+}
+
+/* element + element selector */
+/* element immediately after element  */
+div + span {
+}
+/* element ~ element selector (~ = tilde) */
+/* element preceded element  (followed by)*/
+span ~ p {
+  background-color: darkred;
+}
+/* [attribute] selector */
+/* all elements with attribute will be selected */
+[id] {
+}
+
+/* [attribute=value] selector */
+[alt="submit"] {
+  background-color: darkseagreen;
+}
+/* following 3 are rare to see */
+/* [attribute~=value] selector */
+/* containing the value */
+
+/* [attribute^=value] selector (^=current*/
+/* begins with the value */
+
+/* [attribute$=value] selector */
+/* ends with the value */
+
+/* [attribute*=value] selector */
+/* contains the substring */
+
+/* ================== pseudo classes ============== */
+/* pseudo class  */
+/* :hover */
+
+/* :visited */
+
+/* :focus */
+
+/* :active */
+
+/* :checked */
+
+/* :target */
+
+/* :nth-child() */
+tr:nth-child(2n) {
+  background-color: darkslateblue;
+}
+/* every second row */
+tr:nth-child(3) {
+  background-color: olivedrab;
+}
+td:nth-child(2n) {
+  background-color: pink;
+}
+tr:nth-child(3) td:nth-child(5) {
+  background-color: plum;
+}
+/* pseudo elements  */
+/* ::after  
+  :after css2 and ::after is css3*/
+
+/* ::before  
+    :before css2 and ::before is css3*/
