@@ -102,6 +102,9 @@ td:nth-child(2n) {
 tr:nth-child(3) td:nth-child(5) {
   background-color: plum;
 }
+tr:nth-child(1) :nth-child(n + 3):nth-child(-n + 5) {
+  background-color: saddlebrown;
+}
 /* pseudo elements  */
 /* ::after  
   :after css2 and ::after is css3*/
