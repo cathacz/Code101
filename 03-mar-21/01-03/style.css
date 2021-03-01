@@ -40,20 +40,38 @@ div[class="main-text"]::before {
 .tree {
   width: 25vw;
   height: 25vw;
-  box-shadow: 5px 5px 5px cadetblue;
+  box-shadow: 7px 7px 7px cadetblue;
   opacity: 0.5;
   filter: grayscale(50);
 }
 .tree:hover {
-  transition: 1.5s ease-in-out;
+  transition: 1.1s ease-in-out;
   opacity: 1;
   filter: grayscale(0);
-  width: 35vw;
-  height: 35vw;
+  width: 30vw;
+  height: 30vw;
 }
 /* vh & vw */
 /* 1 vh = 1% of height of viewport */
 /* 1 vw = 1% of width of viewport */
 
+.menu {
+  width: 50vw;
+  height: auto;
+  background-color: coral;
+}
+ul li {
+  display: inline-block;
+  margin: 1vw;
+}
 /* visual content like img */
 /*  % , border-radius */
+.img-text {
+  margin: 5%;
+}
+.last-text {
+  margin: 5%;
+}
+.last-img {
+  margin: 5%;
+}
