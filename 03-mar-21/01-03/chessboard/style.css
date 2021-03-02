@@ -1,0 +1,19 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+table {
+  display: flex-block;
+  margin: 5vh auto;
+  border-collapse: collapse;
+  border: black solid 1px;
+}
+td:empty {
+  width: 5vw;
+  height: 5vw;
+}
+tr:nth-child(2n-1) :nth-child(2n),
+tr:nth-child(2n) :nth-child(2n-1) {
+  background-color: black;
+}
