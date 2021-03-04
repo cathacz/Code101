@@ -5,6 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fancy form</title>
+    <link
+      rel="shortcut icon"
+      href="./2748186_rocket-icon-rocket-png-icon-transparent-png.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="../03-03/fontAwesome/fontawesome-free-5.15.2-web/css/all.css"
+    />
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
@@ -12,7 +21,12 @@
       <fieldset>
         <legend>Your Personal Info</legend>
         <input type="text" name="name" placeholder="Tell me your name" id="1" />
-        <input type="text" name="lastname " id="2" />
+        <input
+          type="text"
+          name="lastname"
+          placeholder="and your last name please"
+          id="2"
+        />
         <input type="datetime" name="b-day" id="3" />
       </fieldset>
       <fieldset>
@@ -20,14 +34,18 @@
         <input type="color" name="color" id="4" />
         <input type="time" name="time" id="5" />
       </fieldset>
+      <i class="fas fa-rocket"></i>
       <section class="toggle">
-        <label class="toggle-label">Want more info?</label>
+        <label class="toggle-lable">Want more info?</label>
         <label class="switch">
           <input type="checkbox" name="moreInfo" />
-          <span class="slider"></span
-        ></label>
+          <span class="slider"></span>
+        </label>
       </section>
       <input type="submit" value="Send" />
+      <i class="fab fa-rocketchat"></i>
+      <i class="fas fa-user-astronaut"></i>
+      <i class="fab fa-twitter"></i>
     </form>
   </body>
 </html>

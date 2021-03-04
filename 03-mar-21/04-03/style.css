@@ -1,0 +1,16 @@
+/* flex container */
+
+.container {
+  display: flex;
+  background-color: coral;
+  width: 500px;
+  height: 500px;
+}
+
+/*  special effects */
+
+/* spicy flex */
+
+/* order: sets the order to lay out an item in a flex */
+
+/* the shortcut */
