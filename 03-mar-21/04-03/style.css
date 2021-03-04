@@ -1,3 +1,8 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 /* flex container */
 
 .container {
@@ -5,12 +10,39 @@
   background-color: coral;
   width: 500px;
   height: 500px;
+  justify-content: center;
+  align-items: center;
+}
+.box {
+  width: 150px;
+  height: 150px;
+  background-color: darksalmon;
+}
+.box-main {
+  /* order: sets the order to lay out an item in a flex */
+  order: 1;
+  width: 150px;
+  height: 150px;
+  background-color: salmon;
+  align-self: flex-start;
+  /* spicy flex */
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  border: 2px dashed darkseagreen;
+  /*  flex-grow */
+  flex-grow: 2;
+  /* flex-shrink */
+  flex-shrink: 3;
+  /* flex-wrap */
+  flex-wrap: wrap;
 }
 
+.baby {
+  width: 40px;
+  height: 40px;
+  background-color: darkslategrey;
+}
 /*  special effects */
-
-/* spicy flex */
-
-/* order: sets the order to lay out an item in a flex */
 
 /* the shortcut */
