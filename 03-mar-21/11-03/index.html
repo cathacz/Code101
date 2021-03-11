@@ -36,7 +36,11 @@
     </section>
     <footer>
       <h5>Made with ❤️ By Catha</h5>
-      <h6>2021 All copyrights reserved ®</h6>
+      <h6>All copyrights reserved ® <span class="year"></span></h6>
     </footer>
+    <script>
+      let year = new Date().getFullYear();
+      document.querySelector(".year").innerHTML = year;
+    </script>
   </body>
 </html>

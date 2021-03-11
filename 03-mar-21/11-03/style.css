@@ -18,7 +18,7 @@ p {
 
 /* direction */
 h1 {
-  writing-mode: vertical-rl;
+  writing-mode: vertical-lr;
 }
 a {
   text-decoration: none;
@@ -27,7 +27,7 @@ a {
 }
 .menu {
   width: 100vw;
-  background-color: burlywood;
+  background-color: lightblue;
 }
 .menu ul {
   height: 5vh;
@@ -37,8 +37,11 @@ a {
   align-items: center;
 }
 .main {
-  width: 75vw;
+  width: 100vw;
   height: 100vh;
+  align-content: center;
+  display: flex;
+  flex-direction: column;
 }
 li:hover {
   border-bottom: 2px solid olive;
@@ -50,6 +53,43 @@ li:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+.gray {
+  width: 50rem;
+  height: 50rem;
+  position: absolute;
+  right: 0rem;
+  bottom: 0rem;
+  background-color: gainsboro;
+  z-index: -2;
+  transform: rotate(45deg);
+  border-radius: 10%;
+}
+.orange {
+  width: 20rem;
+  height: 20rem;
+  position: absolute;
+  left: 0rem;
+  top: 0rem;
+  background-color: lightblue;
+  z-index: -1;
+  transform: rotate(30deg);
+  border-radius: 10%;
 }
 /* positions */
 /* static aka Default*/
+.more-info {
+  width: 100vw;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
