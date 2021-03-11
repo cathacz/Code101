@@ -1,0 +1,55 @@
+/* general setup */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* font fix */
+:root {
+  font-size: 16px;
+}
+/* font */
+p {
+  font: italic 1.5rem fantasy;
+  word-break: normal;
+  text-indent: 3rem;
+  word-spacing: 1rem;
+}
+
+/* direction */
+h1 {
+  writing-mode: vertical-rl;
+}
+a {
+  text-decoration: none;
+  color: antiquewhite;
+  transition: 0.4s;
+}
+.menu {
+  width: 100vw;
+  background-color: burlywood;
+}
+.menu ul {
+  height: 5vh;
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.main {
+  width: 75vw;
+  height: 100vh;
+}
+li:hover {
+  border-bottom: 2px solid olive;
+  transform: scale(1.5);
+}
+.main-intro {
+  width: 100vw;
+  height: 75vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* positions */
+/* static aka Default*/
