@@ -54,7 +54,6 @@ li:hover {
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  position: relative;
 }
 .gray {
   width: 50rem;
@@ -71,11 +70,11 @@ li:hover {
   width: 20rem;
   height: 20rem;
   position: absolute;
-  left: 0rem;
-  top: 0rem;
+  left: 10rem;
+  top: -10rem;
   background-color: lightblue;
   z-index: -1;
-  transform: rotate(30deg);
+  transform: rotate(45deg);
   border-radius: 10%;
 }
 /* positions */
