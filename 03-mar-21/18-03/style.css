@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /*  */
 }
 :root {
   font-size: 16px;
@@ -11,7 +12,7 @@ body {
   height: 100vh;
 }
 .navbar {
-  background-color: lightgray;
+  background-color: peachpuff;
   display: flex;
   justify-content: flex-start;
   flex-flow: row;
@@ -20,7 +21,56 @@ body {
   width: 100vw;
   height: 5vh;
 }
-.navbar::before {
+
+/* fancy menu */
+
+a {
+  text-decoration: none;
+  color: antiquewhite;
+}
+.list-item {
+  list-style: none;
+  font-size: 1rem;
+  color: papayawhip;
+  padding: 0.5rem;
+  background-color: peachpuff;
+  z-index: 1;
+}
+
+/*  style buttons */
+
+.subnavbtn {
+  border: none;
+  background-color: inherit;
+  font-size: 1rem;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  padding: 0.75rem;
+  color: papayawhip;
+}
+/* style menu container */
+
+.subnav-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  width: 35%;
+}
+/* hoover */
+
+.subnavbtn:hover + .subnav-content {
+  display: block;
+  transition: var(--ani-move);
+}
+.list-item:hover {
+  background-color: rosybrown;
+  color: aquamarine;
+  transition: all 0.4s ease-in;
+}
+a:hover {
+  background-color: aquamarine;
+  color: blueviolet;
+}
+/* .navbar::before {
   content: "";
   display: block;
   position: absolute;
@@ -30,7 +80,7 @@ body {
   background-color: lightgray;
   left: 30%;
   top: 20%;
-}
+} */
 /* style items */
 
 /* footer */
@@ -40,7 +90,7 @@ footer {
   width: 100vw;
   background-color: orange;
 }
-footer::after {
+/* footer::after {
   content: "";
   display: block;
   position: absolute;
@@ -50,7 +100,7 @@ footer::after {
   background-color: orange;
   right: 30%;
   bottom: 25%;
-}
+} */
 footer ul {
   display: flex;
   justify-content: space-evenly;
