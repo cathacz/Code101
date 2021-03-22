@@ -89,3 +89,8 @@ button:focus {
 button:focus-visible {
   border: none;
 }
+button:active,
+button:focus {
+  outline: none;
+  border: none;
+}
