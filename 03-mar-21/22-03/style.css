@@ -1,0 +1,91 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  /* some var */
+}
+
+nav {
+  background-color: aquamarine;
+  width: 20vw;
+  height: 50vh;
+  /* without height and width it automatically fits content */
+  margin: 0;
+  padding: 2vh;
+  border-radius: 2%;
+  transition: 0.4s ease-in;
+
+  animation-name: crazy;
+  animation-duration: 2s;
+  display: none;
+}
+
+@keyframes crazy {
+  /* 0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  } */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* The menu 😎  */
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+ul li a {
+  color: black;
+}
+ul li {
+  width: 100%;
+  height: 15%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+ul li:hover {
+  background-color: cadetblue;
+}
+button {
+  background-color: cadetblue;
+  font-size: 2.5rem;
+  border: none;
+  padding: 0.5rem;
+}
+button:hover {
+  background-color: darkcyan;
+  cursor: pointer;
+  border: none;
+}
+button:active {
+  border: olivedrab;
+}
+button:checked {
+  border: none;
+}
+button:focus {
+  border: none;
+}
+button:focus-visible {
+  border: none;
+}
