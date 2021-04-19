@@ -1,0 +1,17 @@
+.triangle {
+  &::before,
+  &::after {
+    display: block;
+    content: "";
+    margin: 1rem;
+  }
+  &::before {
+    @include triangle(up);
+  }
+  &::after {
+    @include triangle(down);
+  }
+}
+.text {
+  @include font-size(s);
+}

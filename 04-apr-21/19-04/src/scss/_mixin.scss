@@ -71,3 +71,52 @@
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
+
+@mixin triangle($direction, $color: salmon) {
+  width: 0;
+  height: 0;
+  @if $direction == up {
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid $color;
+  } @else if $direction == left {
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-right: 5px solid $color;
+  } @else if $direction == down {
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid $color;
+  } @else if $direction == right {
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid $color;
+  } @else {
+    @error "unknown direction #{$direction}";
+  }
+}
+
+$font-sizing: (
+  xs: 9pt,
+  s: 10pt,
+  m: 11pt,
+  l: 12pt,
+  xl: 14pt,
+);
+@mixin font-size($size) {
+  @if map-has-key($font-sizing, $size) {
+    font-size: map-get($font-sizing, $size);
+  } @else {
+    @error "#{size} not available";
+  }
+}
+
+//function in sass
+
+@function font-size($size) {
+  @if map-has-key($font-sizing, $size) {
+    @return map-get($font-sizing, $size);
+  } @else {
+    @error "#{size} not available";
+  }
+} ;
