@@ -1,0 +1,16 @@
+.box {
+  @include center;
+  @include fade-in(4s);
+  @include sizing;
+  background-color: seagreen;
+}
+@keyframes fade-in {
+  0% {
+    @include hide;
+    transform: rotate(0deg);
+  }
+  100% {
+    @include reveal;
+    transform: rotate(45deg);
+  }
+}

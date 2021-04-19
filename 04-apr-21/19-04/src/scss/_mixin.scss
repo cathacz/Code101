@@ -1,0 +1,45 @@
+// reset list style
+
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+// center content
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// hide element
+@mixin hide {
+  opacity: 0;
+  visibility: hidden;
+}
+// fading
+@mixin reveal {
+  opacity: 1;
+  visibility: visible;
+}
+// sizing a box
+@mixin sizing {
+  width: 10vw;
+  height: 10vw;
+}
+// animation fade in
+@mixin fade-in($time) {
+  animation-name: fade-in;
+  animation-duration: #{$time};
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+// animation get bigger
+@mixin get-big($time) {
+  animation-name: get-big;
+  animation-duration: #{$time};
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
