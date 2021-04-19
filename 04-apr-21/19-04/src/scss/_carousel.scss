@@ -1,14 +1,15 @@
 .carousel {
   @include center;
+
   width: 65vw;
   height: 40vw;
   background-color: lightblue;
-  margin: 0 auto 0 auto;
+  margin: 5rem auto 5rem auto;
 
   .color {
-    @include bg(medium);
     position: absolute;
-    @include sizing;
+    width: 55vw;
+    height: 20vw;
     @include center;
     flex-direction: row;
     &::before,
@@ -26,7 +27,6 @@
   }
   .one {
     @include bg(light);
-    background-color: $coloring(light);
   }
   .two {
     @include bg(medium);

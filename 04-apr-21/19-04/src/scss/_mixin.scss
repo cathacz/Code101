@@ -122,13 +122,13 @@ $font-sizing: (
 }
 
 $coloring: (
-  "light": rgb(231, 157, 130),
-  "medium": coral,
-  "dark": rgb(167, 88, 60),
+  light: rgb(231, 157, 130),
+  medium: coral,
+  dark: rgb(167, 88, 60),
 );
 @mixin bg($shade) {
   @if map-has-key($coloring, $shade) {
-    font-size: map-get($coloring, $shade);
+    background-color: map-get($coloring, $shade);
   } @else {
     @error "#{shade} stupid!";
   }
