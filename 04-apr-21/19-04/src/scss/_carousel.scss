@@ -6,6 +6,7 @@
   margin: 0 auto 0 auto;
 
   .color {
+    @include bg(medium);
     position: absolute;
     @include sizing;
     @include center;
@@ -25,12 +26,13 @@
   }
   .one {
     @include bg(light);
-    background-color: light;
+    background-color: $coloring(light);
   }
   .two {
     @include bg(medium);
-    @include hide;
-    background-color: aquamarine;
+    // @include hide;
+    // @include reveal;
+    // background-color: aquamarine;
   }
   .three {
     @include bg(dark);

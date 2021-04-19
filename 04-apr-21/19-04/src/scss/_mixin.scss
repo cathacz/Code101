@@ -122,9 +122,9 @@ $font-sizing: (
 }
 
 $coloring: (
-  light: rgb(231, 157, 130),
-  medium: coral,
-  dark: rgb(167, 88, 60),
+  "light": rgb(231, 157, 130),
+  "medium": coral,
+  "dark": rgb(167, 88, 60),
 );
 @mixin bg($shade) {
   @if map-has-key($coloring, $shade) {
