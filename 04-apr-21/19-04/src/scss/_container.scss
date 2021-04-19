@@ -1,0 +1,12 @@
+.container {
+  @include center;
+  @include container;
+  justify-content: space-evenly;
+  background-color: sandybrown;
+  flex-direction: column;
+  div {
+    @include miniBox;
+    @include center;
+    background-color: rgb(189, 105, 22);
+  }
+}
