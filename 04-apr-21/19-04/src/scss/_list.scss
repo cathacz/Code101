@@ -1,0 +1,62 @@
+.list {
+  @include list;
+  @include center;
+  position: fixed;
+  top: 5rem;
+  right: 5rem;
+  background-color: rosybrown;
+  justify-content: space-evenly;
+  .circle {
+    position: relative;
+    @include circle;
+    @include miniBox;
+    background-color: tomato;
+    @include wave;
+    .square {
+      width: 1.2rem;
+      height: 1.2rem;
+      background-color: salmon;
+      @include square;
+    }
+  }
+  .one {
+    animation-delay: 0s;
+  }
+  .two {
+    animation-delay: 0.25s;
+  }
+  .three {
+    animation-delay: 0.5s;
+  }
+  .four {
+    animation-delay: 0.75s;
+  }
+  .five {
+    animation-delay: 1s;
+  }
+  .six {
+    animation-delay: 1.25s;
+  }
+  .seven {
+    animation-delay: 1.5s;
+  }
+}
+
+@keyframes wave {
+  0% {
+    transform: translateY(-4rem);
+  }
+
+  100% {
+    transform: translateY(4rem);
+  }
+}
+
+@keyframes square {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

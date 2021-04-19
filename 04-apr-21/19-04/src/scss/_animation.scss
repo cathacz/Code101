@@ -1,8 +1,11 @@
 .box {
+  position: fixed;
   @include center;
-  @include fade-in(4s);
+  @include fade-in(5s);
   @include sizing;
-  background-color: seagreen;
+  background-color: snow;
+  right: 25vw;
+  top: 20vw;
 }
 @keyframes fade-in {
   0% {
@@ -11,6 +14,6 @@
   }
   100% {
     @include reveal;
-    transform: rotate(45deg);
+    transform: rotate(365deg);
   }
 }

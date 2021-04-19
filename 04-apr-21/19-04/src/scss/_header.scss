@@ -1,5 +1,5 @@
 .header {
-  @include get-big(4s);
+  @include get-big(5s);
   @include center;
   @include sizing;
 }
@@ -13,7 +13,7 @@
     // transform: scale(2);
   }
   100% {
-    transform: scale(3) translateX(10rem) translateY(10rem);
+    transform: scale(3) translateX(9rem) translateY(9rem);
     background-color: salmon;
   }
 }

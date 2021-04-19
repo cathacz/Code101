@@ -1,9 +1,10 @@
 // reset list style
 
-@mixin reset-list {
-  margin: 0;
+@mixin list {
+  margin: 0rem;
   padding: 0;
   list-style: none;
+  width: 50vw;
 }
 
 // center content
@@ -50,6 +51,23 @@
 @mixin get-big($time) {
   animation-name: get-big;
   animation-duration: #{$time};
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@mixin circle {
+  border-radius: 100%;
+}
+
+// animation wave
+@mixin wave {
+  animation-name: wave;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@mixin square {
+  animation-name: square;
+  animation-duration: 1s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
