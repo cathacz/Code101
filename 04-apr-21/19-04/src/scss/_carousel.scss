@@ -1,0 +1,38 @@
+.carousel {
+  @include center;
+  width: 65vw;
+  height: 40vw;
+  background-color: lightblue;
+  margin: 0 auto 0 auto;
+
+  .color {
+    position: absolute;
+    @include sizing;
+    @include center;
+    flex-direction: row;
+    &::before,
+    &::after {
+      display: block;
+      content: "";
+      margin: 3rem;
+    }
+    &::before {
+      @include triangle(left);
+    }
+    &::after {
+      @include triangle(right);
+    }
+  }
+  .one {
+    @include bg(light);
+    background-color: light;
+  }
+  .two {
+    @include bg(medium);
+    @include hide;
+    background-color: aquamarine;
+  }
+  .three {
+    @include bg(dark);
+  }
+}

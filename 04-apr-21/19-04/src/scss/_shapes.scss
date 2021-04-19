@@ -1,4 +1,9 @@
+.upDown {
+  @include center;
+}
 .triangle {
+  @include center;
+  flex-direction: column;
   &::before,
   &::after {
     display: block;

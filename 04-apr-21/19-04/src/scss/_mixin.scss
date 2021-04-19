@@ -119,4 +119,27 @@ $font-sizing: (
   } @else {
     @error "#{size} not available";
   }
+}
+
+$coloring: (
+  light: rgb(231, 157, 130),
+  medium: coral,
+  dark: rgb(167, 88, 60),
+);
+@mixin bg($shade) {
+  @if map-has-key($coloring, $shade) {
+    font-size: map-get($coloring, $shade);
+  } @else {
+    @error "#{shade} stupid!";
+  }
+}
+
+//function in sass
+
+@function font-size($shade) {
+  @if map-has-key($coloring, $shade) {
+    @return map-get($coloring, $shade);
+  } @else {
+    @error "#{shade} you are stupid";
+  }
 } ;
