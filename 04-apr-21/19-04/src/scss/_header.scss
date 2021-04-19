@@ -2,13 +2,18 @@
   @include get-big(4s);
   @include center;
   @include sizing;
-  background-color: salmon;
 }
 @keyframes get-big {
   0% {
-    transform: scale(1);
+    transform: scale(1) translateX(0rem) translateY(0rem);
+    background-color: salmon;
+  }
+  50% {
+    background-color: lightpink;
+    // transform: scale(2);
   }
   100% {
-    transform: scale(3);
+    transform: scale(3) translateX(10rem) translateY(10rem);
+    background-color: salmon;
   }
 }
