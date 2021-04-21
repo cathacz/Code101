@@ -20,7 +20,17 @@ function multiply() {
   // console.log(userNum);
   let resultText = "";
 
-  resultText += `${userNum} ☘️ ${userMulti} = ${userNum * userMulti} <br>`;
+  resultText += `${userNum} ☘️ ${userMulti} = ${userNum / userMulti} <br>`;
+
+  document.querySelector(".result").innerHTML = resultText;
+}
+function gimmeSqrt() {
+  let userNum = document.querySelector("#sqrt").value;
+
+  // console.log(userNum);
+  let resultText = "";
+
+  resultText += `the Squareroot from ${userNum} is ${Math.sqrt(userNum)} <br>`;
 
   document.querySelector(".result").innerHTML = resultText;
 }
