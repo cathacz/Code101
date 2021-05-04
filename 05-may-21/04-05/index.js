@@ -5,6 +5,7 @@ const msg = document.querySelector(".msg");
 const done = document.querySelector(".done");
 const close = document.querySelector(".close");
 const changeColor = document.querySelector(".changeColor");
+const body = document.querySelector("body");
 // const showMsg = ()=>
 
 function newUser() {
@@ -53,7 +54,11 @@ form.addEventListener("submit", (e) => {
 form.addEventListener("reset", () => {
   showMsg("All gone now!");
 });
+
 changeColor.addEventListener("click", (e) => {
   e.preventDefault();
-  body.style.backgroundColor = "tomato";
+  var e = document.getElementById("color");
+  var result = e.options[e.selectedIndex].value;
+
+  body.style.backgroundColor = result;
 });
