@@ -49,7 +49,7 @@ form.addEventListener("submit", (e) => {
   e.preventDefault();
   const userInput = document.querySelector("#userData").value;
   //no reload of the page
-  showMsg(`${userInput} is a beautiful color`);
+  showMsg(`I like ${userInput} too`);
 });
 form.addEventListener("reset", () => {
   showMsg("All gone now!");
@@ -59,6 +59,5 @@ changeColor.addEventListener("click", (e) => {
   e.preventDefault();
   var e = document.getElementById("color");
   var result = e.options[e.selectedIndex].value;
-
   body.style.backgroundColor = result;
 });
