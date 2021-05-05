@@ -7,12 +7,17 @@
 :root {
   font-family: arial;
 }
-
+div {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
 body {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: orange;
+  background-color: lightpink;
 }
 h1 {
   text-align: center;
@@ -20,12 +25,18 @@ h1 {
   color: wheat;
 }
 h2 {
-  background-color: honeydew;
+  font-style: italic;
 }
 main {
+  display: flex;
+  align-content: center;
+  justify-content: center;
   margin: 0 auto;
 }
 img {
+  display: flex;
+  align-content: center;
+  justify-content: center;
   width: 4rem;
   height: 4rem;
   border-radius: 10px;
