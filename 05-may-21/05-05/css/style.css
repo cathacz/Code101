@@ -22,20 +22,22 @@ body {
 h1 {
   text-align: center;
   background-color: grey;
+
   color: wheat;
 }
 h2 {
   font-style: italic;
+  align-self: center;
 }
 main {
   display: flex;
-  align-content: center;
+  align-items: center;
   justify-content: center;
   margin: 0 auto;
 }
 img {
   display: flex;
-  align-content: center;
+  align-self: center;
   justify-content: center;
   width: 4rem;
   height: 4rem;
