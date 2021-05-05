@@ -20,3 +20,8 @@
 
 // JSON.stringify()
 // Converts a JavaScript value to a JavaScript Object Notation (JSON) string. aka object(or array of objects 😅) into json
+
+// step 3 >> import from other file (use same name)
+import data from "./data.js";
+
+let parsedData = JSON.parse(data);
