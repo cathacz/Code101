@@ -1,21 +1,26 @@
-const obj = [
+const recipes = [
   {
-    name: "Catha",
-    age: 34,
-    city: "Leipzig",
+    id: 1,
+    title: "Sourdough",
+    ingredients: ["water", "flour", "salt", "yeast"],
+    image:
+      "https://amyinthekitchen.com/wp-content/uploads/2018/11/Beginners-Sourdough-Bread-AITK.jpg",
   },
   {
-    name: "Matthias",
-    age: 49,
-    city: "Leipzig",
+    id: 2,
+    title: "Baguettes",
+    ingredients: ["water", "flour", "salt", "yeast"],
+    image:
+      "https://www.thespruceeats.com/thmb/mCTU2pQ6A-WZ7qQqxH4C8gSbR9E=/1428x1428/smart/filters:no_upscale()/GettyImages-636741221-e5442b2f0b3a4d33a26ebf7deb237fed.jpg",
   },
   {
-    name: "Konstantin",
-    age: 32,
-    city: "Leipzig",
+    id: 3,
+    title: "Sliced bread",
+    ingredients: ["water", "flour"],
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdfaG5Cv4oOjewDMyFitnCpsOBH3ifA5fkycKUy0_y_4Vv2P4IkA",
   },
 ];
-// step 1 >> Object into JSON
-let data = JSON.stringify(obj);
 
-export default data;
+let data = JSON.stringify(recipes);
+export { data };
