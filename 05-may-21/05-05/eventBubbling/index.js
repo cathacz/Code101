@@ -22,7 +22,7 @@ hide.addEventListener("change", () => {
   }
 });
 
-// farther more about that
+// further more about that
 // event.stopPropagation();
 //https://developer.mozilla.org/en-US/docs/Web/API/Event/stopPropagation
 // also don't forget this cool thing
