@@ -71,3 +71,6 @@ async function startSomething() {
 }
 
 startSomething();
+
+console.log("Hej");
+let x = 33;
