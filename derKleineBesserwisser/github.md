@@ -2,19 +2,19 @@
 
 ## Commands
 
-_git init_ >> initializing github, start github
+`git init` >> initializing github, start github
 
-_git status_ >> see status, which branch, not committed files, etc
+`git status` >> see status, which branch, not committed files, etc
 
-\_git add \_\_\_\_ >> adds the file you chose
+`git add \_\_\_\` >> adds the file you chose
 
-_git add ._ >> adds everything
+`git add .` >> adds everything
 
-_git commit -m '\_\_\_'_ >> commits stuff, use message, so you know what you did – comes ALWAYS after add
+`git commit -m '\_\_\_'` >> commits stuff, use message, so you know what you did – comes ALWAYS after add
 
-_git add . && commit -m '\_\_\_'_ >> combines both commands in one line
+`git add . && commit -m '\_\_\_'` >> combines both commands in one line
 
-_git log_ >> shows commit logs
+`git log` >> shows commit logs
 
 ## README file
 
