@@ -3,12 +3,18 @@
 ## Commands
 
 _git init_ >> initializing github, start github
+
 _git status_ >> see status, which branch, not committed files, etc
-_git add \_\_\__ >> adds the file you chose
+
+\_git add \_\_\_\_ >> adds the file you chose
+
 _git add ._ >> adds everything
+
 _git commit -m '\_\_\_'_ >> commits stuff, use message, so you know what you did – comes ALWAYS after add
+
 _git add . && commit -m '\_\_\_'_ >> combines both commands in one line
-_git log_ >>
+
+_git log_ >> shows commit logs
 
 ## README file
 
