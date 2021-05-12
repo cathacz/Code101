@@ -74,3 +74,4 @@ startSomething();
 
 console.log("Hej");
 let x = 33;
+const w = "Hej you";
