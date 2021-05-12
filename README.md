@@ -1,3 +1,3 @@
 # live-coding
 
-[personal Documentation:] (./derKleineBesserwisser)
+[personal Documentation:] (./derKleineBesserwisser/README.md)
