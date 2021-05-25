@@ -70,7 +70,7 @@
 
 `git status` >> see status, which branch, not committed files, etc
 
-`git add ____` >> adds the file you chose
+`git add ____` >> adds the file you choose
 
 `git add .` >> adds everything
 
