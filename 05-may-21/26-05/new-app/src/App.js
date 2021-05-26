@@ -24,7 +24,7 @@ function App() {
       <h1>Playing with React</h1>
       <Hej userName={name} emo="happy" fruitArr={fruits} />
       <Text />
-      <Question />
+
       <Text />
       <Text />
       <p>Here are some fruits:</p>
@@ -34,7 +34,7 @@ function App() {
           <li key={index}>{fruit}</li>
         ))}
       </ul> */}
-
+      <Question />
       <ul className="questions">{listQuestions}</ul>
     </div>
   );
