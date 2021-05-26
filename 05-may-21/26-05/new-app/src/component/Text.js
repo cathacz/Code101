@@ -8,7 +8,11 @@ function Text() {
 }
 
 function Hej(props) {
-  return <div className="hej">Hej, it's you, {props.userName}! </div>;
+  return (
+    <div className="hej">
+      Hej, it's you, {props.userName}! <br /> I am {props.emo} to see you!{" "}
+    </div>
+  );
 }
 //export default Text;
 

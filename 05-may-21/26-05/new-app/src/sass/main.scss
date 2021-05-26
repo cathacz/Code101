@@ -1,7 +1,18 @@
 body {
   background-color: salmon;
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
 }
 .hej {
   color: tomato;
   font-size: 3rem;
+  text-align: center;
+}
+
+h1 {
+  font-size: 5rem;
 }
