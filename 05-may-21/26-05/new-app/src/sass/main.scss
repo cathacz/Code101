@@ -1,5 +1,5 @@
 body {
-  background-color: salmon;
+  background-color: lightsalmon;
   div {
     display: flex;
     justify-content: center;
@@ -8,11 +8,35 @@ body {
   }
 }
 .hej {
-  color: tomato;
+  color: lightcoral;
   font-size: 3rem;
   text-align: center;
+  text-shadow: coral 2px 2px 2px;
+  margin: 2vw;
 }
 
 h1 {
   font-size: 5rem;
+}
+
+p {
+  font-weight: bold;
+}
+li {
+  font-family: monospace;
+  list-style: none;
+}
+.questions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  .li {
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    flex-direction: column;
+    justify-self: space-between;
+  }
 }

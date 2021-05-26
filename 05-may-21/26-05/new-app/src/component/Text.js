@@ -14,6 +14,10 @@ function Hej(props) {
     </div>
   );
 }
+
+function Question(props) {
+  return <div>{props.question}</div>;
+}
 //export default Text;
 
-export { Text, Hej };
+export { Text, Hej, Question };
