@@ -2,7 +2,7 @@ const Footer = () => {
   let year = new Date().getFullYear();
   return (
     <div>
-      <h4>Copywrite {year}</h4>
+      <h4>➳ {year}</h4>
     </div>
   );
 };

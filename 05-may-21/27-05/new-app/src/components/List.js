@@ -7,11 +7,13 @@ const List = (props) => {
   }
   function handleSubmit(e) {
     e.preventDefault();
-    props.setList((prevState) => [
-      ...prevState,
-      { id: prevState.length, title: userInput.trim(), done: false },
-    ]);
-    setUserInput("");
+    if (userInput.length) {
+      props.setList((prevState) => [
+        ...prevState,
+        { id: prevState.length, title: userInput.trim(), done: false },
+      ]);
+      setUserInput("");
+    }
   }
   return (
     <form onSubmit={handleSubmit}>
