@@ -14,14 +14,16 @@ function App() {
   };
 
   const check = (itemCheck) => {
-    list.filter((item) => {
+    // console.log(itemCheck);
+    setList((prevState)=>{ prevState.filter((item) => {
       if (item.id === itemCheck) {
         item.done = !item.done;
         // makes it true
       }
+   
       return item;
     });
-  };
+  })
 
   return (
     <React.Fragment>

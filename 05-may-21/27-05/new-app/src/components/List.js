@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { v4 as uuidv4 } from "uuid";
 
 const List = (props) => {
   const [userInput, setUserInput] = useState("");
@@ -7,10 +8,11 @@ const List = (props) => {
   }
   function handleSubmit(e) {
     e.preventDefault();
+    console.log(uuidv4());
     if (userInput.length) {
       props.setList((prevState) => [
         ...prevState,
-        { id: prevState.length, title: userInput.trim(), done: false },
+        { id: uuidv4(), title: userInput.trim(), done: false },
       ]);
       setUserInput("");
     }
