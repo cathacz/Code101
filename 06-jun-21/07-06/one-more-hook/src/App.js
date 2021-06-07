@@ -3,20 +3,30 @@ import Num from "./components/Num";
 
 function App() {
   const [count, setCount] = useState(0);
-  // Stop useEffect from running on every render
-  // Only Run Once, on Mount
-  useEffect(() => {
-    console.log("Something");
-  }, []);
-  // Run useEffect on State Change
-  useEffect(() => {
-    console.log("Something");
-  }, [count]);
-  // Run useEffect When a Prop Changes
+
+  // >>> Stop useEffect from running on every render
 
   useEffect(() => {
-    console.log("Something");
+    console.log("Stop");
   }, []);
+  // >>>  Only Run Once, on Mount :)
+
+  useEffect(() => {
+    console.log("Only Once");
+  }, []);
+
+  //  >>> Run useEffect on State Change :)
+
+  useEffect(() => {
+    console.log("on State Change");
+  }, [count]);
+
+  // >>> Run useEffect When a Prop Changes
+
+  useEffect(() => {
+    console.log("on Prop Change");
+  }, [{ count }]);
+
   return (
     <React.Fragment>
       <Num setCount={setCount} />
