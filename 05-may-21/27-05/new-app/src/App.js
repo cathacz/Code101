@@ -15,7 +15,7 @@ function App() {
 
   const check = (itemCheck) => {
     // console.log(itemCheck);
-    setList((prevState)=>{ prevState.filter((item) => {
+    setList((prevState)=>{ return prevState.filter((item) => {
       if (item.id === itemCheck) {
         item.done = !item.done;
         // makes it true
