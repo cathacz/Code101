@@ -17,18 +17,7 @@ const App = () => {
   function handleChange(e) {
     setUserInput(e.target.value);
   }
-  function handleSubmit(e) {
-    e.preventDefault();
-    let textToURl = encodeURIComponent(userInput);
-    let endPoint = `https://restcountries.eu/rest/v2/name/${textToURl}`;
 
-    // old school fetch: (much more then axios)
-    // fetch(endPoint).then((res)=>res.json()).then((data)=>setResult(data));
-
-    axios(endPoint)
-      .then(({ data }) => setResult(data))
-      .catch(console.error(`Nope – you took a wrong turn somewhere`));
-  }
   //   State          Component
   if (loading) return <Loading />;
   return (
