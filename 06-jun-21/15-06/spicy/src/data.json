@@ -1,0 +1,79 @@
+[
+  {
+    "id": "0",
+    "ISBN": "978-3-7757-3196-6",
+    "title": "Charcoal",
+    "author": "Robert Longo",
+    "publisher": "Hatje Cantz",
+    "price": "78",
+    "inventory": "17",
+    "cover": "./img/longoCharcoal.jpg",
+    "date": "2017"
+  },
+  {
+    "id": "1",
+    "ISBN": "978-3-7757-4139-2",
+    "title": "World of Malls",
+    "author": ["Andres Lepik", "Vera Simone Bader"],
+    "publisher": "Hatje Cantz",
+    "price": "15",
+    "inventory": "7",
+    "cover": "./img/worldOfMalls.jpg",
+    "date": "2016"
+  },
+  {
+    "id": "2",
+    "ISBN": "978-3-7757-4354-9",
+    "title": "Esther's World",
+    "author": "Esther Haase",
+    "publisher": "Hatje Cantz",
+    "price": "50",
+    "inventory": "26",
+    "cover": "./img/estersWorld.jpg",
+    "date": "2016"
+  },
+  {
+    "id": "3",
+    "ISBN": "978-9-1867-4102-0",
+    "title": "Burning Beauty",
+    "author": "David LaChapelle",
+    "publisher": "Fotografiska",
+    "price": "55",
+    "inventory": "4",
+    "cover": "./img/burningBeauty.jpg",
+    "date": "2012"
+  },
+  {
+    "id": "4",
+    "ISBN": "978-3-8837-5786-5",
+    "title": "Werkumkreisung",
+    "author": "Günter Brus",
+    "publisher": ["Albertina", "Verlag der Buchhandlung Walther König"],
+    "price": "105",
+    "inventory": "0",
+    "cover": "./img/werkumkreisung.jpg",
+    "date": "2002"
+  },
+  {
+    "id": "5",
+    "ISBN": "978-3-901753-66-4",
+    "title": "The long shadow of Chernobyl",
+    "author": ["Gerd Ludwig", "Michail Gorbatschow"],
+    "publisher": ["Edition Lammerhuber"],
+    "price": "75",
+    "inventory": "64",
+    "cover": "./img/tschernobyl.jpg",
+    "date": "2017"
+  },
+  {
+    "id": "6",
+    "ISBN": "978-3-8881-4967-2",
+    "title": "Images of Women I",
+    "author": "Peter Lindbergh",
+    "publisher": "Schirmel/Mosel",
+    "price": "50",
+    "inventory": "94",
+    "cover": "./img/imagesOfWomen.jpeg",
+    "date": "2007"
+  }
+]
