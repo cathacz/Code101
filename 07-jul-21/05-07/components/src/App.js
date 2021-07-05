@@ -14,6 +14,9 @@ export default class App extends React.Component {
       isLogged: false,
       data: { name: "Catha", age: 31 },
     };
+    this.sum = function () {
+      console.log("function build in const");
+    };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -37,6 +40,7 @@ export default class App extends React.Component {
         <p>
           3+4=<b>{add(3, 4)}</b>
         </p>
+        {this.sum()}
       </div>
     );
   }
