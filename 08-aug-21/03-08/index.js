@@ -1,4 +1,5 @@
 const fs = require("fs");
+const math = require("./math.js");
 
 fs.appendFile("newText.txt", "a new Text is created here \n", (err) => {
   if (err) throw err;
@@ -46,3 +47,10 @@ fs.open("newText.txt", "w", (err, data) => {
 
 // fs flags
 // https://nodejs.org/docs/latest-v12.x/api/fs.html#fs_file_system_flags
+
+console.log(math);
+let x = 3;
+let y = 4;
+console.log(`x + y = ${math.sum(x, y)}`);
+console.log(`x - y = ${math.sub(x, y)}`);
+console.log(`x * y = ${math.multi(x, y)}`);
