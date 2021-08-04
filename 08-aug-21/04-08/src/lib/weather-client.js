@@ -20,12 +20,12 @@ class OpenWeatherClient {
     if (country) {
       endpoint += `,${country}`;
     }
-    return await this.get(entpoint);
+    return await this.get(endpoint);
   }
 }
 
 // converting f to c:
-// 450f -30 /2 = c
+// 450f -30 /2 = c >>> simple way
 
 // http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&units=metric&appid=${this.apiKey}
 

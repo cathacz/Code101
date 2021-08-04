@@ -4,12 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start ": "node src/index.js"
+    "start ": "node src/index.js",
+    "deploy": "chmod +x src/index.js && npm link",
+    "undeploy": "nmp unlink"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.21.1"
+    "axios": "^0.21.1",
+    "nodemon": "^2.0.12"
+  },
+  "bin": {
+    "weather": "src/index.js"
   }
 }
