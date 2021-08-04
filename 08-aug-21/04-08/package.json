@@ -8,7 +8,6 @@
     "deploy": "chmod +x src/index.js && npm link",
     "undeploy": "nmp unlink"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {

@@ -2,7 +2,7 @@
 
 const weather = require("./lib/weather.js");
 const args = process.argv.slice(2);
-console.log(args);
+// console.log(args);
 
 const [city, country] = args;
 weather(city, country).then(console.log).catch(console.error);

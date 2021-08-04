@@ -1,7 +1,7 @@
 const OpenWeatherClient = require("./weather-client");
 
 const myKey = require("../../config");
-const API_KEY = myKey.apiKEY;
+const API_KEY = myKey.apiKey;
 
 function formatData(data) {
   const result = `In ${data.name}, ${data.sys.country} there are ${
