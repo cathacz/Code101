@@ -5,7 +5,7 @@ const API_KEY = myKey.apiKey;
 
 function formatData(data) {
   const result = `In ${data.name}, ${data.sys.country} there are ${
-    dat.main.temp
+    data.main.temp
   }\u0000C. Today's Weather ${data.weather
     .map((condition) => condition.description)
     .join(", ")}`;

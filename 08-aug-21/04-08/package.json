@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start ": "node src/index.js",
+    "start": "node src/index.js",
     "deploy": "chmod +x src/index.js && npm link",
-    "undeploy": "nmp unlink"
+    "undeploy": "npm unlink"
   },
   "author": "",
   "license": "ISC",
