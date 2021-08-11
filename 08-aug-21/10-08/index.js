@@ -8,10 +8,11 @@
 // HTTP Methods
 // https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods
 
+require("dotenv").config();
 const { request } = require("express");
 const express = require("express");
 const app = express();
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
 // root route:
 app.get("/", (request, response) => {
