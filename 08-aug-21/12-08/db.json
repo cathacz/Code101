@@ -1,0 +1,14 @@
+{
+  "articles": [
+    {
+      "id": "666",
+      "title": "Beast"
+    },
+    {
+      "id": "123",
+      "title": "melon"
+    }
+  ],
+  "user": {},
+  "num": 4
+}
