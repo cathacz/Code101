@@ -20,3 +20,4 @@ const employeesDataSchema = new mongoose.Schema({
 module.exports = mongoose.model("EmployeesData", employeesDataSchema);
 // work on old collection that we have
 // module.exports = mongoose.model("EmployeesData",employeesDataSchema, "EmployeesData");
+//                                (modulename, database, old database you wanna use)
