@@ -20,6 +20,8 @@
             <th>Name</th>
             <th>LName</th>
             <th>City</th>
+            <th>Avatar</th>
+
           </thead>
           <tbody>
             <%for(let i=0;i< data.length;i++){%>
@@ -29,6 +31,7 @@
               <td><%=data[i].firstName%></td>
               <td><%=data[i].lastName%></td>
               <td><%=data[i].city%></td>
+              <td><%=data[i].avatar%></td>
             </tr>
             <%}%>
           </tbody>
